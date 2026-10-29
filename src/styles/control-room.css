@@ -441,3 +441,16 @@ body.theme-control-room .hero{align-items:start;min-height:0;margin-bottom:18px}
 /* The Word/PDF guides and pop-ups share the same heading, list, workflow and code structure. */
 body.theme-control-room .student-guide-content .guide-document-title{font-size:18px;line-height:1.4;margin-top:0}body.theme-control-room .student-guide-content .guide-subtitle{color:#84bdcf;font-size:11px}body.theme-control-room .student-guide-content .guide-small-note{font-size:11px;line-height:1.6;color:#98bdcc}body.theme-control-room .student-guide-content pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:9px 12px;border-radius:5px}body.theme-control-room .student-guide-content li{margin-bottom:7px;line-height:1.65}body.theme-control-room .student-guide-content a{overflow-wrap:anywhere;color:#91d6df}
 @media(max-width:650px){body.theme-control-room .student-guide-content .guide-steps{grid-template-columns:repeat(2,minmax(0,1fr))}body.theme-control-room .student-guide-content .guide-steps>span:last-child{grid-column:1/-1}}
+
+
+/* Student guides display the canonical PDFs from docs/. */
+body.theme-control-room .student-guide-pdf-dialog{width:min(880px,calc(100vw - 32px));max-width:880px;height:min(780px,86dvh)}
+body.theme-control-room .student-guide-pdf{display:block;flex:1 1 auto;min-height:0;width:100%;border:0;background:#fff}
+body.theme-control-room .student-guide-pdf p{color:#aecbd6;font-size:12px}
+@media(max-width:650px){body.theme-control-room .student-guide-pdf-dialog{width:calc(100vw - 20px);height:92dvh;max-height:92dvh}}
+
+body.theme-control-room .student-guide-pdf{background:#1b3441;overflow-y:auto}
+body.theme-control-room .student-guide-fallback{min-height:100%;box-sizing:border-box;padding:16px 22px 24px;background:#1b3441;color:#aecbd6}
+body.theme-control-room .student-guide-fallback .guide-pdf-fallback-note{margin:0 0 12px;color:#c9e7ed;font-size:11px}
+body.theme-control-room .student-guide-fallback .guide-pdf-fallback-note a{color:#8ee0e8}
+@media(max-width:650px){body.theme-control-room .student-guide-fallback{padding:12px 18px 20px}}

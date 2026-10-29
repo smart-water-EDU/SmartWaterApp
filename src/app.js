@@ -252,36 +252,15 @@ lineChart($('sensor-chart'),points,{selected:state.minute,onSelect:minute=>{stat
   }).join('');
   document.querySelectorAll('[data-event]').forEach(button=>button.onclick=()=>{const e=engine.dataset.events.find(e=>e.id===button.dataset.event);state.caseId='historical';state.segment='main';state.minute=30;pause();goTo(engine.indexAt(e.start));});
 }
-function pdfEscape(value){return value.replace(/\\/g,'\\\\').replace(/\(/g,'\\(').replace(/\)/g,'\\)');}
-function downloadGuidePdf(){
-  const title=$('ide-guide-title').innerText.trim();
-  const content=`${title}\n\n${$('ide-guide-content').innerText.trim()}`;
-  const ascii=content.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x20-\x7E]/g,' ');
-  const rawLines=ascii.split(/\r?\n/).map(line=>line.trim()).filter(Boolean);
-  const lines=[];
-  for(const raw of rawLines){let line='';for(const word of raw.split(/\s+/)){if(line&&line.length+word.length+1>88){lines.push(line);line=word;}else line+=(line?' ':'')+word;}if(line)lines.push(line);}
-  const pageLines=48,pages=[];for(let i=0;i<lines.length;i+=pageLines)pages.push(lines.slice(i,i+pageLines));if(!pages.length)pages.push(['Student guide']);
-  const fontId=3+pages.length*2,objects=[];
-  objects.push('<< /Type /Catalog /Pages 2 0 R >>');
-  objects.push(`<< /Type /Pages /Kids [${pages.map((_,i)=>`${3+i*2} 0 R`).join(' ')}] /Count ${pages.length} >>`);
-  pages.forEach((page,i)=>{
-    const pageId=3+i*2,contentId=pageId+1;
-    const stream=`BT /F1 10 Tf 52 790 Td 14 TL ${page.map(line=>`(${pdfEscape(line)}) Tj T*`).join(' ')} ET`;
-    objects.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${fontId} 0 R >> >> /Contents ${contentId} 0 R >>`);
-    objects.push(`<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`);
-  });
-  objects.push('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>');
-  let pdf='%PDF-1.4\n',offsets=[0];
-  objects.forEach((object,i)=>{offsets.push(pdf.length);pdf+=`${i+1} 0 obj\n${object}\nendobj\n`;});
-  const xref=pdf.length;pdf+=`xref\n0 ${objects.length+1}\n0000000000 65535 f \n`;
-  for(let i=1;i<offsets.length;i++)pdf+=`${String(offsets[i]).padStart(10,'0')} 00000 n \n`;
-  pdf+=`trailer\n<< /Size ${objects.length+1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
-  const url=URL.createObjectURL(new Blob([pdf],{type:'application/pdf'})),link=document.createElement('a');
-  link.href=url;link.download='smart-drops-student-ide-guide.pdf';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-}
 function bindStudentGuides(){
   const pairs=[['open-ide-guide','ide-guide-dialog'],['open-development-guide','development-guide-dialog']];
-  for(const [buttonId,dialogId] of pairs){const button=$(buttonId),dialog=$(dialogId);button.onclick=()=>{if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');};}
+  for(const [buttonId,dialogId] of pairs){
+    const button=$(buttonId),dialog=$(dialogId),pdf=dialog.querySelector('.student-guide-pdf');
+    // Vite rewrites object.data to a fingerprinted asset in production. Use that
+    // same URL for Download and fallback Open, while dev keeps /docs/ live.
+    dialog.querySelectorAll('a[href$=".pdf"]').forEach(link=>{link.href=pdf.data;});
+    button.onclick=()=>{if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');};
+  }
   document.querySelectorAll('[data-close-guide]').forEach(button=>button.onclick=()=>{const dialog=button.closest('dialog');if(typeof dialog.close==='function'&&dialog.open)dialog.close();else dialog.removeAttribute('open');});
   document.querySelectorAll('.student-guide-dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog&&dialog.open)dialog.close();}));
 }

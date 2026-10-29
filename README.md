@@ -60,8 +60,7 @@ public/assets/                 Building photograph, logo and diagram artwork
 public/data/datasets.js         Generated local data bundle used by the interface
 data/*.json                    Building, profiles, sensor registry and data manifest
 data/*.csv                     Cold/hot module loads, common loads and hourly sensors
-public/docs/                    Student-guide downloads
-docs/                           Model notes and editable guide source
+docs/                           Model notes and canonical student-guide PDFs
 tools/                          Deterministic dataset builders
 tests/                          Node built-in model and dataset checks
 ```
@@ -92,4 +91,4 @@ Open **Development → Additional Systems → Sewage Heat Recovery**, or click t
 
 Open **Development → Additional Systems → Rainwater Collector**. Configure roofs, storage and collection assumptions, select rainwater consumers and inspect their connections and annual supply. Import a complete hourly 2026 weather CSV from the weather frame header, or optionally retrieve historical reanalysis through Open-Meteo. Completed-year API data are clearly labeled when replayed on 2026. Designs and imported weather save locally, independently of the potable-water baseline. Four generated consumer PNGs are included. See [Rainwater designer](docs/RAINWATER-DESIGNER.md) for the storage balance, CSV format, assumptions and student extension files.
 
-The two student guides in `docs/` are the editable Word sources, with matching PDFs. **Notes for students** opens their updated text and offers each PDF from the pop-up header. Published copies in `public/docs/` are included in the Vite build. Guide 01 covers setup, Git and IDE/AI workflows; Guide 02 starts with sewage heat recovery and rainwater before the remaining student extensions.
+The two student-guide PDFs in `docs/` are the source for **Notes for students** PDF previews and downloads. Vite serves them directly during development and bundles them for deployment. Browsers without inline PDF support show a reading copy in `index.html` and a link to the current PDF; update that fallback text when a guide changes. Local Word drafts are ignored by Git. Guide 01 covers setup, Git and IDE/AI workflows; Guide 02 starts with sewage heat recovery and rainwater before the remaining student extensions.
