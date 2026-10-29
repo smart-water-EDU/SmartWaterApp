@@ -3,7 +3,7 @@
   const files = {
     'building.json': 'building',
     'retrofit_consumption_profiles.json': 'profiles',
-    'monitoring_2026.json': 'monitoring'
+    'data_manifest.json': 'monitoring'
   };
   const storageKey = 'smart-drops-water-manager-settings-v1';
   const customMonitoringKey = 'smart-drops-custom-monitoring-v1';

@@ -1,0 +1,26 @@
+{
+  "purpose": "Smart Drops rainwater consumer thumbnails",
+  "assets": [
+    {
+      "id": "irrigation",
+      "file": "irrigation.png",
+      "prompt": "Use case: scientific-educational. Asset type: one square transparent PNG thumbnail for the Smart Drops rainwater designer. Subject: a small blue garden irrigation sprinkler spraying three graceful turquoise streams onto two simple green-blue plants; small muted orange valve detail. ONE isolated centered clipart icon. Match an educational engineering icon family: polished semi-flat isometric clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle dimensional shading. Palette cadetblue, steelblue, powderblue and turquoise with small nuances of muted warm orange. Genuinely transparent background. No text, letters, digits, logos, watermark, scenery, card frame or ground plane. Generous 12% transparent padding. Readable and distinct at 48–64 pixels. Icon asset only, no interface mockup."
+    },
+    {
+      "id": "toilet-flushing",
+      "file": "toilet-flushing.png",
+      "prompt": "Use case: scientific-educational. Asset type: one square transparent PNG thumbnail for the Smart Drops rainwater designer. Subject: a compact blue toilet with a clearly visible rectangular flush cistern and turquoise water swirl; small muted orange flush button detail. ONE isolated centered clipart icon. Match an educational engineering icon family: polished semi-flat isometric clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle dimensional shading. Palette cadetblue, steelblue, powderblue and turquoise with small nuances of muted warm orange. Genuinely transparent background. No text, letters, digits, logos, watermark, scenery, card frame or ground plane. Generous 12% transparent padding. Readable and distinct at 48–64 pixels. Icon asset only, no interface mockup."
+    },
+    {
+      "id": "cooling",
+      "file": "cooling.png",
+      "prompt": "Use case: scientific-educational. Asset type: one square transparent PNG thumbnail for the Smart Drops rainwater designer. Subject: a compact steel-blue industrial evaporative cooling tower with a circular top fan, blue water droplets and subtle orange heat airflow accents. ONE isolated centered clipart icon. Match an educational engineering icon family: polished semi-flat isometric clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle dimensional shading. Palette cadetblue, steelblue, powderblue and turquoise with small nuances of muted warm orange. Genuinely transparent background. No text, letters, digits, logos, watermark, scenery, card frame or ground plane. Generous 12% transparent padding. Readable and distinct at 48–64 pixels. Icon asset only, no interface mockup."
+    },
+    {
+      "id": "parking-washing",
+      "file": "parking-washing.png",
+      "prompt": "Use case: scientific-educational. Asset type: one square transparent PNG thumbnail for the Smart Drops rainwater designer. Subject: a blue pressure-washing lance spraying turquoise water onto a simple gray-blue parking bay with a small blue parked car and one muted orange parking-line detail. ONE isolated centered clipart icon. Match an educational engineering icon family: polished semi-flat isometric clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle dimensional shading. Palette cadetblue, steelblue, powderblue and turquoise with small nuances of muted warm orange. Genuinely transparent background. No text, letters, digits, logos, watermark, scenery, card frame or ground plane. Generous 12% transparent padding. Readable and distinct at 48–64 pixels. Icon asset only, no interface mockup."
+    }
+  ],
+  "generator": "OpenAI built-in image generation"
+}

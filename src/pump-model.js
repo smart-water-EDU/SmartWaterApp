@@ -78,7 +78,7 @@ function consumptionEnergyWindow(engine, index) {
   });
   return [...observed, ...forecast].map(point => ({
     ...point,
-    energyKWh: point.flowM3H == null ? null : hourlyPumpEnergyKWh(point.flowM3H)
+    energyKWh: point.flowM3H == null ? null : point.phase==='History' ? engine.sensorValue('S-EE-CW-PUMP',index+point.hour) : hourlyPumpEnergyKWh(point.flowM3H)
   }));
 }
 

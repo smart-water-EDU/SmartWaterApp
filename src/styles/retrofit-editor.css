@@ -1,0 +1,269 @@
+/* STUDENT EXTENSION: compact building editor; scoped to this workspace. */
+.retrofit-editor{width:min(1480px,96vw);max-width:none;height:min(920px,94dvh);max-height:94dvh;box-sizing:border-box;padding:0;border:1px solid #547886;border-radius:16px;background:#152c37;color:#d8eaf0;box-shadow:0 24px 90px #0009;overflow:hidden;display:none;font:12px 'Segoe UI',Arial,sans-serif}.retrofit-editor[open]{display:flex;flex-direction:column}.retrofit-editor::backdrop{background:#06151dc9;backdrop-filter:blur(4px)}
+.retrofit-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 18px;background:#1c3743;border-bottom:1px solid #3e5e6c;flex-shrink:0}.retrofit-heading{flex-shrink:0}.retrofit-header h2{font-size:18px;font-weight:600;line-height:1.25;color:#d8eef4;margin:3px 0 0}.editor-kicker{font-size:8px;letter-spacing:.8px;color:#79cfd9;font-weight:600}.retrofit-feedback{min-width:0;margin-inline:auto;font-size:10px;color:#a8cfda}.editor-status{font-weight:500;font-size:10px}.editor-error{font-size:9px!important;color:#ffb7aa!important;line-height:1.4!important;margin:3px 0 0!important;max-width:390px}.editor-error:empty{display:none}.editor-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.retrofit-editor .editor-actions button{font:11px 'Segoe UI',Arial,sans-serif;min-height:30px;padding:6px 12px;white-space:nowrap;cursor:pointer}.retrofit-editor button:disabled{opacity:.4;cursor:default}
+.retrofit-body{display:grid;grid-template-columns:minmax(0,1fr) 480px;flex:1;min-height:0;position:relative}.retrofit-network{display:flex;flex-direction:column;min-width:0;min-height:0}.retrofit-network-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px 10px;border-bottom:1px solid #355463;flex-shrink:0;flex-wrap:wrap}.retrofit-network-toolbar>strong{font-size:12px;font-weight:500;color:#badce7}.retrofit-editor .editor-add-sensor{display:flex;align-items:center;gap:7px;border:0;padding:0;background:transparent;color:#b4e4e9;cursor:pointer;font:11px 'Segoe UI',Arial,sans-serif}.editor-plus-circle{display:grid;place-items:center;width:27px;height:27px;box-sizing:border-box;border:1px solid #68b8ca;border-radius:50%;background:#254b5b;color:#b7f5f5;font:400 23px/1 'Segoe UI',Arial,sans-serif}
+.retrofit-canvas{position:static;flex:1;min-height:0;overflow:hidden}.retrofit-drawing{height:100%;width:100%;box-sizing:border-box;overflow:hidden;padding:10px}.retrofit-svg{width:100%;height:100%;min-width:0;display:block;background:#152c37}.retrofit-svg text{font-family:'Segoe UI',Arial,sans-serif;fill:#d2e7ee}.retrofit-svg .st59{fill:#152c37}.retrofit-svg .st2{fill:#18313d;stroke:#355463}.retrofit-svg .st57{fill:#213d49;stroke:#446575}.retrofit-svg :is(.st0,.st1,.st11){fill:#1c3440;stroke:#9db5c0}.retrofit-svg .st48{fill:#00ced1;stroke:#1c3d4a}.retrofit-svg .st55{fill:#70c2e4}.retrofit-svg .st54{fill:#e98583}.retrofit-svg [data-editor-module]{cursor:pointer}.retrofit-svg [data-editor-module] text{pointer-events:none}.retrofit-svg [data-editor-module].is-selected>rect{stroke:#00eeee!important;stroke-width:3!important}.retrofit-svg [data-editor-module]:hover>rect{stroke:powderblue;stroke-width:2}.retrofit-svg [data-meter-module]{font-size:9px}.retrofit-svg .editor-type-label{font-size:9px;font-weight:600}
+/* A full-width horizontal tray keeps the type choices square and their titles visible. */
+.retrofit-types{position:absolute;z-index:4;top:10px;left:12px;right:12px;bottom:auto;width:auto;padding:11px 13px;background:#244854fa;border:1px solid #6eafb9;border-radius:11px;box-shadow:0 10px 35px #00182288;overflow:hidden;animation:type-slide .18s ease-out}.retrofit-types[hidden]{display:none}.retrofit-types>div:first-child{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:11px}.retrofit-types>div:first-child button{border:0;padding:0;background:transparent;color:#d9f0f4;font-size:20px;line-height:1;cursor:pointer}.type-module{display:none}.type-buttons{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:7px}.type-buttons button{aspect-ratio:1;min-width:0;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;border:1px solid #557783;background:#1b3541;border-radius:8px;color:#d9ecf2;padding:6px;text-align:center;font:10px/1.35 'Segoe UI',Arial,sans-serif;overflow-wrap:anywhere;cursor:pointer}.type-buttons button.active,.type-buttons button:hover{background:#386c7c;border-color:#00ced1}.type-buttons i{width:19px;height:19px;border-radius:5px;flex-shrink:0;border:1px solid #a5c6d266}@keyframes type-slide{from{opacity:0;transform:translateX(-15px)}to{opacity:1;transform:translateX(0)}}
+.retrofit-controls{min-width:0;min-height:0;overflow:hidden;background:#1b3440;border-left:1px solid #3e5e6c;padding:15px 18px;box-sizing:border-box}.editor-fields{height:100%;display:flex;flex-direction:column;min-height:0}.editor-module-heading{flex-shrink:0}.editor-module-heading>div{display:flex;align-items:center;gap:10px;margin-bottom:10px}.editor-module-heading h3{font:600 19px 'Segoe UI',Arial,sans-serif;margin:0;color:#cdeaf2}.editor-module-heading .editor-kicker{display:grid;place-items:center;width:27px;height:27px;border:1px solid #5d8999;border-radius:6px;color:#9edce5}.editor-area-budget{font-size:9px;color:#82afc2;margin-left:auto}.editor-use-button{width:100%;min-height:33px;display:flex;justify-content:space-between;gap:9px;align-items:center;background:#294b5c;border:1px solid #5a8a9b;color:#d5eef3;border-radius:7px;padding:7px 10px;text-align:left;cursor:pointer;font:11px 'Segoe UI',Arial,sans-serif}.editor-use-button i{width:15px;height:15px;border-radius:4px;background:var(--tenant-color);border:1px solid #a7cbd199}.editor-use-button>span{flex:1}.editor-use-button b{font-size:16px;color:#96d7e2;font-weight:400}
+.editor-module-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:10px;margin-top:13px;min-height:0}.editor-input-card{display:grid;grid-template-columns:25px minmax(0,1fr);grid-template-rows:auto auto;gap:4px 7px;padding:9px 10px;border:1px solid #416574;border-radius:8px;background:#203f4d;min-width:0}.editor-input-card>svg,.editor-notes-card>svg,.editor-import-actions svg{width:20px;height:20px;fill:none;stroke:#80bed2;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}.editor-input-card>svg{grid-column:1;grid-row:1/3;align-self:center}.editor-input-card>span{grid-column:2;font-size:9px;color:#99c1d2;line-height:1.3}.editor-input-card>div{display:flex;align-items:baseline;gap:5px;min-width:0;grid-column:2}.retrofit-editor .editor-input-card input{font:600 17px 'Segoe UI',Arial,sans-serif;width:100%;min-width:0;box-sizing:border-box;border:0;background:transparent;color:#d3edf3;padding:0;line-height:1.3;appearance:textfield}.editor-input-card input::-webkit-inner-spin-button{appearance:none}.editor-input-card small{font-size:9px;color:#7fabbf;white-space:nowrap}.editor-notes-card{display:grid;grid-template-columns:25px minmax(0,1fr);gap:6px;grid-column:1/-1;padding:9px 10px;border:1px solid #416574;border-radius:8px;background:#203f4d}.editor-notes-card>svg{grid-row:1/3;align-self:center}.editor-notes-card>span{font-size:9px;color:#99c1d2}.retrofit-editor .editor-notes-card textarea{grid-column:2;width:100%;box-sizing:border-box;height:32px;min-height:0;resize:none;border:0;background:transparent;color:#d3edf3;padding:0;font:11px/1.4 'Segoe UI',Arial,sans-serif}.editor-import,.editor-sensor-card{grid-column:1/-1;display:grid;gap:7px;padding:10px 11px;border:1px solid #416574;border-radius:8px;background:#1d3b49;min-width:0}.editor-tool-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.editor-tool-heading strong{font-size:10px;font-weight:500;color:#b5d8e4}.editor-tool-heading>span{font-size:9px;color:#78acbf}.editor-import-actions{display:flex;align-items:center;gap:9px}.retrofit-editor .editor-import-actions button{font-size:10px;padding:6px 8px;cursor:pointer}.editor-import-actions .secondary-button{display:flex;align-items:center;gap:6px}.editor-import-actions svg{width:14px;height:14px}.import-state{font-size:9px;color:#82cbd3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.retrofit-editor [data-remove-import]{font-size:9px;padding:0;text-align:left;width:fit-content;cursor:pointer}.editor-sensor-reading{display:flex;gap:7px;align-items:center;min-width:0}.editor-sensor-reading>b{width:23px;height:23px;display:grid;place-items:center;flex:none;border:1px solid #7fcbdf;border-radius:50%;font-size:11px;color:#aeeaf2}.editor-sensor-reading>span{font-size:9px;color:#92bccd}.editor-sensor-reading strong{font-size:14px;font-weight:600;color:#c4e9ee;margin-left:auto;white-space:nowrap}.editor-sensor-reading small{font-size:9px;font-weight:400;color:#87b5c9}.editor-sensor-reading button{border:0;background:none;color:#94c3d1;font-size:17px;padding:0;cursor:pointer}.editor-empty-sensor{color:#6d99ae;font-size:13px;line-height:1}.editor-sensor-card.is-inspected{outline:1px solid #79cddd;outline-offset:2px}.retrofit-editor input:focus-visible,.retrofit-editor textarea:focus-visible,.retrofit-editor button:focus-visible{outline:2px solid #67c5d2;outline-offset:2px}
+.virtual-flow-sensor{cursor:pointer}.virtual-flow-sensor circle{fill:#214a5d;stroke:#91dae8;stroke-width:1.2}.virtual-flow-sensor text{fill:#d0f2f7!important;font:600 8px 'Segoe UI',Arial,sans-serif;pointer-events:none}.virtual-flow-sensor:focus-visible{outline:1px solid #8cdeeb;outline-offset:3px}
+@media(max-width:1100px){.retrofit-controls{padding:12px}.retrofit-header{padding:8px 14px;gap:10px}.retrofit-header h2{font-size:16px}.editor-status{font-size:9px}.retrofit-feedback{max-width:210px}.retrofit-editor .editor-actions button{font-size:10px;padding:6px 9px}.type-buttons{gap:5px}.type-buttons button{font-size:9px;gap:5px;padding:5px}.type-buttons i{width:15px;height:15px}.retrofit-network-toolbar{padding:10px}.editor-module-form{gap:8px;margin-top:10px}.editor-input-card{padding:8px;gap:3px 6px}.editor-input-card>span{font-size:8px}.retrofit-editor .editor-input-card input{font-size:16px}.editor-input-card small{font-size:8px}}
+@media(max-width:850px) and (min-width:621px){.retrofit-body{grid-template-columns:minmax(0,1fr) 405px}.retrofit-feedback{max-width:145px}.retrofit-header h2{font-size:15px}.editor-actions{gap:5px}.retrofit-network-toolbar>strong{font-size:10px}}
+@media(max-height:650px) and (min-width:621px){.retrofit-header{padding-block:6px}.retrofit-header h2{font-size:15px}.editor-kicker{font-size:7px}.retrofit-editor .editor-actions button{min-height:26px;padding:5px 8px;font-size:10px}.retrofit-controls{padding:9px 12px}.editor-module-heading>div{margin-bottom:5px}.editor-module-heading h3{font-size:16px}.editor-module-heading .editor-kicker{height:22px;width:22px}.editor-use-button{min-height:27px;padding:5px 8px;font-size:10px}.editor-module-form{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:7px}.editor-input-card{grid-template-columns:17px minmax(0,1fr);padding:6px;gap:2px 4px}.editor-input-card>svg{width:16px;height:16px}.editor-input-card>span{font-size:7px}.retrofit-editor .editor-input-card input{font-size:13px}.editor-input-card small{font-size:7px}.editor-notes-card{grid-column:1/-1;padding:5px 7px;gap:3px}.editor-notes-card>span{font-size:7px}.retrofit-editor .editor-notes-card textarea{height:22px;font-size:9px}.editor-import,.editor-sensor-card{grid-column:auto;gap:4px;padding:7px}.editor-import{grid-column:1/3}.editor-sensor-card{grid-column:3;align-content:start}.editor-tool-heading strong{font-size:8px}.editor-tool-heading>span{font-size:7px}.retrofit-editor .editor-import-actions button{font-size:8px;padding:4px 5px}.editor-import-actions{gap:5px}.import-state{font-size:7px}.editor-sensor-reading{flex-wrap:wrap;gap:3px}.editor-sensor-reading>b{height:17px;width:17px;font-size:9px}.editor-sensor-reading>span{font-size:6px}.editor-sensor-reading strong{font-size:10px;margin-left:0}.editor-sensor-reading small{font-size:6px}.retrofit-network-toolbar{padding:8px}.type-buttons button{font-size:8px;gap:4px}.type-buttons i{width:13px;height:13px}}
+@media(max-width:620px){.retrofit-editor{width:98vw;height:97dvh;max-height:97dvh}.retrofit-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 8px;padding:8px 10px}.retrofit-heading{grid-column:1;grid-row:1}.retrofit-header h2{font-size:14px}.retrofit-feedback{grid-column:1/-1;grid-row:2;max-width:none}.retrofit-header .editor-kicker{font-size:6px}.editor-status{font-size:8px}.editor-actions{grid-column:2;grid-row:1;gap:4px}.retrofit-editor .editor-actions button{padding:5px 6px;min-height:26px;font-size:8px}.retrofit-editor .editor-actions [data-editor-reset]{font-size:7px;padding:3px}.retrofit-body{grid-template-columns:1fr;grid-template-rows:minmax(0,.95fr) minmax(0,1.05fr);overflow:hidden}.retrofit-controls{padding:8px 10px;overflow:hidden;border-left:0;border-top:1px solid #3e5e6c}.retrofit-network-toolbar{padding:6px 9px;gap:5px}.retrofit-network-toolbar>strong{font-size:9px}.retrofit-editor .editor-add-sensor{font-size:9px;gap:5px}.editor-plus-circle{width:22px;height:22px;font-size:20px}.retrofit-drawing{padding:5px}.editor-module-heading>div{margin-bottom:5px;gap:7px}.editor-module-heading h3{font-size:15px}.editor-module-heading .editor-kicker{width:22px;height:22px}.editor-area-budget{font-size:7px}.editor-use-button{min-height:26px;padding:4px 7px;font-size:9px}.editor-use-button i{width:12px;height:12px}.editor-module-form{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:6px}.editor-input-card{grid-template-columns:15px minmax(0,1fr);padding:5px;gap:2px 4px}.editor-input-card>svg{width:14px;height:14px}.editor-input-card>span{font-size:7px}.retrofit-editor .editor-input-card input{font-size:12px}.editor-input-card small{font-size:6px}.editor-notes-card{padding:5px;gap:3px;grid-column:1/-1}.editor-notes-card>span{font-size:7px}.editor-notes-card>svg{width:16px;height:16px}.retrofit-editor .editor-notes-card textarea{font-size:9px;height:22px}.editor-import{grid-column:1/3;padding:6px;gap:4px}.editor-sensor-card{grid-column:3;padding:6px;gap:4px}.editor-tool-heading strong{font-size:8px}.editor-tool-heading>span{font-size:7px}.editor-import-actions{gap:4px}.retrofit-editor .editor-import-actions button{font-size:8px;padding:4px}.editor-import-actions svg{width:11px;height:11px}.import-state{font-size:7px}.editor-sensor-reading{flex-wrap:wrap;gap:3px}.editor-sensor-reading>b{width:16px;height:16px;font-size:8px}.editor-sensor-reading>span{font-size:6px}.editor-sensor-reading strong{font-size:10px;margin-left:0}.editor-sensor-reading small{font-size:6px}.retrofit-types{left:6px;right:6px;top:6px;padding:8px}.type-buttons{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:54px;gap:5px;overflow-x:auto;padding-bottom:5px}.type-buttons button{font-size:8px;padding:5px;gap:5px}.type-buttons i{width:12px;height:12px}.retrofit-types>div:first-child{font-size:9px}}
+
+/* 2026 preview stays separate from the active monitoring dataset. */
+.retrofit-editor .retrofit-header{display:grid;grid-template-columns:minmax(180px,1fr) minmax(330px,1.4fr) auto;gap:18px;padding-block:9px}
+.retrofit-editor .retrofit-feedback{margin:5px 0 0;max-width:300px;line-height:1.25}
+.retrofit-editor .editor-status{font-size:9px}
+.editor-annual-summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;min-width:0}
+.editor-annual-gauge{display:flex;gap:7px;align-items:center;min-width:0;border:1px solid #496e7c;border-radius:9px;background:#203e4a;padding:8px 10px;box-sizing:border-box;min-height:62px}
+.editor-annual-gauge>svg{width:48px;height:33px;flex-shrink:0;overflow:visible;fill:none;stroke-width:6;stroke-linecap:round}
+.annual-track{stroke:#395a68}.annual-fill{stroke:#82c6d7;stroke-dasharray:0 100;transition:stroke-dasharray .2s}
+.annual-copy{min-width:0}.annual-copy>span{font-size:8px;color:#9fc8d5;white-space:nowrap}.annual-copy>div{display:flex;align-items:baseline;flex-wrap:wrap;gap:3px 5px;margin-top:3px;line-height:1.25}
+.annual-value{font-size:18px;color:#e0f3f5;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}.annual-copy small{font-size:8px;color:#9ebfcd;white-space:nowrap}.annual-delta{font-size:10px;font-weight:600;white-space:nowrap}.annual-delta[data-direction="saving"]{color:#7de1ad}.annual-delta[data-direction="increase"]{color:#ff9c91}.annual-delta[data-direction="unchanged"]{color:#a2bdc9}
+.retrofit-editor .retrofit-network-toolbar{flex-wrap:nowrap}
+@media(max-width:1200px){.retrofit-editor .retrofit-header{grid-template-columns:minmax(160px,1fr) minmax(300px,1.4fr) auto;gap:10px}.retrofit-editor .retrofit-header h2{font-size:15px}.editor-annual-gauge{padding:7px;gap:5px}.editor-annual-gauge>svg{width:35px;height:27px}.annual-value{font-size:16px}.annual-copy>span{font-size:7px}.annual-copy small{font-size:7px}.annual-delta{font-size:9px}}
+@media(max-width:900px){.retrofit-editor .retrofit-header{grid-template-columns:minmax(150px,1fr) minmax(280px,1.3fr) auto;padding-inline:10px;gap:8px}.retrofit-editor .editor-actions{gap:4px}.retrofit-editor .editor-actions button{font-size:9px;padding:5px 6px}.editor-annual-summary{gap:6px}.editor-annual-gauge>svg{width:29px;height:24px}.annual-value{font-size:15px}.retrofit-editor .retrofit-feedback{max-width:180px}.retrofit-editor .editor-status{font-size:8px}}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-header{padding-block:5px}.editor-annual-gauge{min-height:48px;padding:5px}.annual-value{font-size:14px}.annual-copy>div{gap:2px 4px;margin-top:1px}.editor-annual-gauge>svg{height:24px;width:31px}.retrofit-editor .editor-kicker{font-size:7px}.retrofit-editor .retrofit-feedback{margin-top:3px}.retrofit-editor .retrofit-header h2{font-size:14px}.retrofit-editor .editor-module-form{gap:5px}}
+@media(max-width:620px){.retrofit-editor .retrofit-header{grid-template-columns:minmax(0,1fr) auto;gap:7px 5px;padding:7px 9px}.retrofit-editor .retrofit-heading{grid-column:1;grid-row:1;min-width:0}.retrofit-editor .retrofit-header h2{font-size:12px}.retrofit-editor .editor-actions{grid-column:2;grid-row:1}.retrofit-editor .editor-actions button{font-size:8px;padding:5px;min-height:25px}.retrofit-editor .retrofit-feedback{margin-top:3px;max-width:none}.retrofit-editor .editor-status{font-size:7px}.editor-annual-summary{grid-column:1/-1;grid-row:2;gap:6px}.editor-annual-gauge{min-height:45px;padding:5px 8px}.editor-annual-gauge>svg{width:31px;height:24px}.annual-copy>div{gap:2px 5px;margin-top:1px}.annual-value{font-size:15px}.annual-copy>span{font-size:7px}.annual-copy small{font-size:7px}.annual-delta{font-size:9px}.retrofit-editor .editor-error{font-size:7px!important}}
+
+/* Building editor: compact type picker and diagram fitted to the available section. */
+.retrofit-editor .retrofit-heading{min-width:0}
+.retrofit-editor .retrofit-heading h2{margin-top:0}
+.retrofit-editor .retrofit-header .editor-add-sensor{display:flex;align-items:center;gap:6px;white-space:nowrap;margin-right:5px}
+.retrofit-editor .editor-plus-circle{display:flex;align-items:center;justify-content:center;width:27px;height:27px;padding:0;font:500 21px/27px 'Segoe UI',Arial,sans-serif;transform:none;text-align:center}
+.retrofit-editor .retrofit-drawing{display:flex;align-items:center;justify-content:center;padding:4px;overflow:hidden}
+.retrofit-editor .retrofit-svg{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+.retrofit-editor .retrofit-types{left:auto;right:12px;top:10px;width:min(408px,calc(100% - 24px));box-sizing:border-box;padding:10px 11px}
+.retrofit-editor .type-buttons{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.retrofit-editor .type-buttons button{width:100%;aspect-ratio:1;min-height:0}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-types{width:min(300px,calc(100% - 16px));padding:6px;top:6px;right:8px}.retrofit-editor .type-buttons{gap:4px}.retrofit-editor .type-buttons button{font-size:7px;gap:2px;padding:3px}.retrofit-editor .type-buttons i{width:11px;height:11px}.retrofit-editor .retrofit-types>div:first-child{margin-bottom:4px}.retrofit-editor .editor-plus-circle{width:22px;height:22px;font-size:17px;line-height:22px}}
+@media(max-width:620px){.retrofit-editor .retrofit-types{left:50%;right:auto;top:5px;transform:translateX(-50%);width:min(300px,calc(100% - 12px));padding:6px}.retrofit-editor .type-buttons{grid-auto-flow:row;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-columns:auto;gap:4px;overflow:visible;padding:0}.retrofit-editor .type-buttons button{font-size:7px;gap:3px;padding:3px}.retrofit-editor .type-buttons i{width:11px;height:11px}.retrofit-editor .retrofit-types>div:first-child{margin-bottom:4px}.retrofit-editor .editor-add-sensor{font-size:8px;gap:3px;margin-right:2px}.retrofit-editor .editor-plus-circle{width:20px;height:20px;font-size:16px;line-height:20px}}
+
+/* Full-width symbolic section: scroll vertically to see the complete network and legend. */
+.retrofit-editor .retrofit-drawing{
+  display:block;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#5f98a9 #183642;
+}
+.retrofit-editor .retrofit-svg{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:960/895;
+  max-width:100%;
+  max-height:none;
+  flex:none;
+  object-fit:initial;
+}
+
+/* Six module settings in two rows, followed by the data and virtual-sensor tools. */
+.retrofit-editor .editor-module-form{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:8px}
+.retrofit-editor .editor-input-card{grid-template-columns:20px minmax(0,1fr);padding:8px;gap:3px 5px}
+.retrofit-editor .editor-input-card>svg{width:17px;height:17px}
+.retrofit-editor .editor-input-card>span{font-size:8px}
+.retrofit-editor .editor-input-card input{font-size:15px}
+.retrofit-editor .editor-type-card>.editor-use-button{grid-column:2;min-width:0;min-height:24px;height:24px;padding:2px 4px;font-size:10px;border:0;background:transparent}
+.retrofit-editor .editor-type-card>.editor-use-button i{width:11px;height:11px;flex:none}
+.retrofit-editor .editor-type-card>.editor-use-button>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.retrofit-editor .editor-type-card>.editor-use-button b{font-size:12px}
+.retrofit-editor .editor-schedule-card .editor-schedule-times{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:2px;min-width:0}
+.retrofit-editor .editor-schedule-times label{display:flex;flex-direction:column;min-width:0;font-size:7px;color:#92bbc9}
+.retrofit-editor .editor-schedule-times input{min-width:0;width:100%;height:22px;box-sizing:border-box}
+.retrofit-editor .editor-schedule-times>b{font-size:11px;font-weight:400;color:#91afba;margin-bottom:4px}
+@media(max-height:650px){.retrofit-editor .editor-module-form{gap:5px;margin-top:5px}.retrofit-editor .editor-input-card{padding:5px;grid-template-columns:15px minmax(0,1fr);gap:2px 3px}.retrofit-editor .editor-input-card>svg{width:13px;height:13px}.retrofit-editor .editor-input-card input{font-size:12px}.retrofit-editor .editor-type-card>.editor-use-button{height:19px;min-height:19px;font-size:8px;padding:0}.retrofit-editor .editor-schedule-times input{height:17px;font-size:11px}}
+@media(max-width:620px){.retrofit-editor .editor-module-form{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.retrofit-editor .editor-input-card{grid-template-columns:12px minmax(0,1fr);padding:4px;gap:2px 3px}.retrofit-editor .editor-input-card>svg{width:11px;height:11px}.retrofit-editor .editor-input-card input{font-size:11px}.retrofit-editor .editor-type-card>.editor-use-button{font-size:7px;gap:2px;padding:0}.retrofit-editor .editor-type-card>.editor-use-button i{width:9px;height:9px}.retrofit-editor .editor-schedule-times label{font-size:6px}.retrofit-editor .editor-schedule-times input{font-size:10px}}
+
+.retrofit-editor .editor-schedule-card .editor-schedule-times{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+
+/* The section owns the full dialog height; all editor controls live in the right pane. */
+.retrofit-editor .retrofit-body{flex:1;min-height:0;height:100%;grid-template-columns:minmax(0,1fr) 480px}
+.retrofit-editor .retrofit-network{height:100%;min-height:0}
+.retrofit-editor .retrofit-controls{display:flex;flex-direction:column;position:relative;overflow-x:hidden;overflow-y:auto;padding:0;scrollbar-width:thin;scrollbar-color:#5f98a9 #183642}
+.retrofit-editor .retrofit-header{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:9px;width:100%;padding:13px 16px 12px;box-sizing:border-box;position:relative;z-index:1}
+.retrofit-editor .retrofit-heading{width:100%}
+.retrofit-editor .retrofit-feedback{margin-top:4px}
+.retrofit-editor .editor-annual-summary{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.retrofit-editor .editor-annual-gauge{min-height:66px;padding:7px}
+.retrofit-editor .annual-value{font-size:22.5px}
+.retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:10px}
+.retrofit-editor .annual-delta{font-size:12.5px}
+.retrofit-editor .editor-actions{display:flex;align-items:center;justify-content:space-between;gap:5px;width:100%;flex-wrap:wrap;margin-top:2px}
+.retrofit-editor .editor-actions>button{flex:1 1 0;min-width:0;padding:6px 5px;font-size:10px}
+.retrofit-editor .editor-actions>[data-editor-reset]{flex:1 0 100%}
+.retrofit-editor .editor-actions .editor-add-sensor{justify-content:center;margin:0}
+.retrofit-editor .editor-fields{flex:1 0 auto;height:auto;padding:14px 16px;box-sizing:border-box}
+.retrofit-editor .retrofit-types{z-index:4;right:10px;width:min(408px,calc(100% - 20px));max-height:calc(100% - 16px);overflow-y:auto}
+@media(max-height:650px) and (min-width:621px){
+ .retrofit-editor .retrofit-header{gap:4px;padding:7px 10px}
+ .retrofit-editor .editor-annual-gauge{min-height:45px;padding:3px 5px}
+ .retrofit-editor .annual-value{font-size:17.5px}
+ .retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:8px}
+ .retrofit-editor .annual-delta{font-size:10px}
+ .retrofit-editor .editor-actions>button{min-height:24px;padding:3px;font-size:8px}
+ .retrofit-editor .editor-fields{padding:7px 10px}
+}
+@media(max-width:850px) and (min-width:621px){.retrofit-editor .retrofit-body{grid-template-columns:minmax(0,1fr) 405px}.retrofit-editor .retrofit-header{padding-inline:10px}.retrofit-editor .editor-fields{padding-inline:10px}.retrofit-editor .editor-annual-gauge>svg{width:27px;height:22px}.retrofit-editor .annual-value{font-size:18px}.retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:8px}.retrofit-editor .annual-delta{font-size:10px}}
+@media(max-width:620px){
+ .retrofit-editor{overflow-y:auto;overflow-x:hidden}
+ .retrofit-editor .retrofit-body{display:flex;flex-direction:column;flex:0 0 auto;height:auto;overflow:visible}
+ .retrofit-editor .retrofit-network{flex:0 0 auto;height:calc(97dvh - 4px);min-height:260px}
+ .retrofit-editor .retrofit-controls{flex:0 0 auto;min-height:440px;overflow:visible;border-left:0;border-top:1px solid #3e5e6c}
+ .retrofit-editor .retrofit-header{display:flex;gap:7px;padding:10px}
+ .retrofit-editor .editor-annual-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .retrofit-editor .editor-annual-gauge{min-height:55px}
+ .retrofit-editor .annual-value{font-size:18.75px}
+ .retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:8px}
+ .retrofit-editor .annual-delta{font-size:10px}
+ .retrofit-editor .editor-actions{display:flex}
+ .retrofit-editor .editor-actions>button{min-height:27px;padding:4px 2px;font-size:8px}
+ .retrofit-editor .editor-fields{padding:10px}
+ .retrofit-editor .retrofit-types{left:50%;right:auto;transform:translateX(-50%);width:min(300px,calc(100% - 12px));max-height:none}
+}
+
+/* Header controls: actions in the top-right, gauges and sensor beneath the title. */
+.retrofit-editor .retrofit-header{display:grid;grid-template-columns:minmax(0,1fr) 96px;grid-template-rows:auto auto auto;align-items:start;gap:8px 10px}
+.retrofit-editor .retrofit-heading{grid-column:1;grid-row:1}
+.retrofit-editor .editor-annual-summary{grid-column:1;grid-row:2;min-width:0}
+.retrofit-editor .retrofit-header>.editor-add-sensor{grid-column:1;grid-row:3;justify-self:start;margin:0;padding:0;min-height:27px}
+.retrofit-editor .editor-actions{grid-column:2;grid-row:1/4;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;gap:6px;width:96px;margin:0}
+.retrofit-editor .editor-actions>button{width:100%;flex:none;min-height:29px;padding:5px 4px;font-size:10px}
+.retrofit-editor .editor-actions>[data-editor-reset]{flex:none}
+/* Draw the plus with centered strokes; font glyph baselines vary across Windows. */
+.retrofit-editor .editor-plus-circle{position:relative;font-size:0;line-height:0;flex:none}
+.retrofit-editor .editor-plus-circle::before,.retrofit-editor .editor-plus-circle::after{content:'';position:absolute;left:50%;top:50%;display:block;background:currentColor;border-radius:2px;transform:translate(-50%,-50%)}
+.retrofit-editor .editor-plus-circle::before{width:12px;height:2px}
+.retrofit-editor .editor-plus-circle::after{width:2px;height:12px}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-header{gap:4px 7px;grid-template-columns:minmax(0,1fr) 82px}.retrofit-editor .editor-actions{width:82px;gap:4px}.retrofit-editor .editor-actions>button{min-height:24px;padding:3px;font-size:8px}.retrofit-editor .retrofit-header>.editor-add-sensor{min-height:22px}.retrofit-editor .editor-plus-circle::before{width:10px}.retrofit-editor .editor-plus-circle::after{height:10px}}
+@media(max-width:620px){.retrofit-editor .retrofit-header{display:grid;grid-template-columns:minmax(0,1fr) 78px;grid-template-rows:auto auto auto;gap:6px}.retrofit-editor .retrofit-heading{grid-column:1;grid-row:1}.retrofit-editor .editor-annual-summary{grid-column:1;grid-row:2;min-width:0}.retrofit-editor .retrofit-header>.editor-add-sensor{grid-column:1;grid-row:3;min-height:22px}.retrofit-editor .editor-actions{grid-column:2;grid-row:1/4;display:flex;width:78px;gap:4px}.retrofit-editor .editor-actions>button{min-height:25px;padding:3px 2px;font-size:8px}.retrofit-editor .editor-plus-circle::before{width:10px}.retrofit-editor .editor-plus-circle::after{height:10px}}
+
+/* Right-pane sections are independent so students can extend equipment separately. */
+.retrofit-editor .retrofit-header{display:flex;flex-direction:column;align-items:stretch;gap:9px;padding:12px 16px;border-bottom:1px solid #3e5e6c}
+.retrofit-editor .retrofit-header h2{font-size:17px;margin:0}
+.retrofit-editor .editor-actions{display:flex;flex-direction:column;align-self:flex-end;gap:5px;width:96px;margin:0}
+.retrofit-editor .editor-actions>button{width:100%;min-height:28px;padding:5px;font-size:10px}
+.retrofit-editor .editor-annual-section,.retrofit-editor .editor-equipment-section{padding:12px 16px;border-bottom:1px solid #3e5e6c;flex:none}
+.retrofit-editor .editor-annual-section h3,.retrofit-editor .editor-equipment-section h3,.retrofit-editor .editor-module-section-heading h3{font:600 11px 'Segoe UI',Arial,sans-serif;color:#c7e5ee;margin:0 0 9px}
+.retrofit-editor .editor-annual-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}
+.retrofit-editor .editor-equipment-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.retrofit-editor .editor-equipment-trigger{display:flex;align-items:center;gap:8px;min-height:35px;padding:4px 8px;border:1px solid #527787;border-radius:7px;background:#244655;color:#c9e6ee;font:10px 'Segoe UI',Arial,sans-serif;cursor:pointer}
+.retrofit-editor .editor-equipment-trigger:hover,.retrofit-editor .editor-equipment-trigger[aria-expanded="true"]{border-color:#79c8d5;background:#2a5464}
+.retrofit-editor .editor-equipment-trigger .editor-plus-circle{width:23px;height:23px}
+.retrofit-editor .editor-tool-drawer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:8px;padding:8px;border:1px solid #578394;border-radius:8px;background:#203e4c;animation:editor-menu-wipe .2s ease-out}
+.retrofit-editor .editor-tool-drawer[hidden]{display:none}
+.retrofit-editor .editor-tool-drawer>button{display:flex;flex-direction:column;gap:3px;align-items:flex-start;min-height:43px;padding:7px 9px;border:1px solid #5a8392;border-radius:6px;background:#294e5d;color:#d0e9ee;font:10px 'Segoe UI',Arial,sans-serif;text-align:left;cursor:pointer}
+.retrofit-editor .editor-tool-drawer>button small{font-size:8px;color:#94c6d3}
+.retrofit-editor .editor-tool-drawer>button:disabled{opacity:.62;cursor:not-allowed}
+.retrofit-editor .editor-tool-drawer>button:disabled small{color:#e5a49b}
+.retrofit-editor .editor-system-drawer{grid-template-columns:repeat(3,minmax(0,1fr))}
+@keyframes editor-menu-wipe{from{opacity:0;transform:translateY(-8px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:translateY(0);clip-path:inset(0)}}
+.retrofit-editor .editor-module-section{display:flex;flex-direction:column;flex:none}
+.retrofit-editor .editor-module-section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:12px 16px 0}
+.retrofit-editor .editor-module-section-heading h3{margin-bottom:3px}
+.retrofit-editor .editor-module-section-heading .retrofit-feedback{margin:0}
+.retrofit-editor .editor-module-section-heading [data-editor-reset]{font-size:9px;padding:3px 0}
+.retrofit-editor .editor-fields{flex:none;height:auto;padding:10px 16px 16px}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-header{padding:7px 10px;gap:5px}.retrofit-editor .retrofit-header h2{font-size:14px}.retrofit-editor .editor-actions{gap:3px}.retrofit-editor .editor-actions>button{min-height:22px;padding:3px;font-size:8px}.retrofit-editor .editor-annual-section,.retrofit-editor .editor-equipment-section{padding:6px 10px}.retrofit-editor .editor-annual-section h3,.retrofit-editor .editor-equipment-section h3{font-size:9px;margin-bottom:4px}.retrofit-editor .editor-annual-gauge{min-height:42px}.retrofit-editor .editor-equipment-trigger{min-height:25px;padding:2px 5px;font-size:8px}.retrofit-editor .editor-equipment-trigger .editor-plus-circle{width:19px;height:19px}.retrofit-editor .editor-module-section-heading{padding:6px 10px 0}.retrofit-editor .editor-fields{padding:5px 10px 10px}}
+@media(max-width:620px){.retrofit-editor .retrofit-header{display:flex;padding:10px}.retrofit-editor .editor-actions{display:flex;width:90px}.retrofit-editor .editor-annual-section,.retrofit-editor .editor-equipment-section{padding:9px 10px}.retrofit-editor .editor-module-section-heading{padding:9px 10px 0}.retrofit-editor .editor-fields{padding:8px 10px 12px}}
+
+/* Compact top section: title on the left, three actions on the right. */
+.retrofit-editor .retrofit-header{display:grid;grid-template-columns:minmax(0,1fr) 96px;align-items:start;gap:8px}
+.retrofit-editor .retrofit-header h2{grid-column:1;grid-row:1}
+.retrofit-editor .retrofit-header .editor-actions{grid-column:2;grid-row:1;justify-self:end}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-header{grid-template-columns:minmax(0,1fr) 82px;gap:5px}}
+@media(max-width:620px){.retrofit-editor .retrofit-header{display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:6px}}
+
+
+/* Editor pane: keep the header close to its action stack, with open gauges. */
+.retrofit-editor .retrofit-header{padding-block:6px;gap:0}
+.retrofit-editor .editor-actions{gap:4px}
+.retrofit-editor .editor-actions>button{min-height:26px;padding-block:4px}
+.retrofit-editor .editor-annual-gauge{border:0;border-radius:0;background:transparent;box-shadow:none;padding:2px 0;min-height:54px}
+.retrofit-editor .editor-annual-section,.retrofit-editor .editor-equipment-section{border-bottom:0}
+.retrofit-editor .editor-import{grid-column:1/-1}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-header{padding-block:4px}.retrofit-editor .editor-actions>button{min-height:22px;padding-block:3px}.retrofit-editor .editor-annual-gauge{min-height:42px}}
+@media(max-width:620px){.retrofit-editor .retrofit-header{padding-block:6px}.retrofit-editor .editor-annual-gauge{min-height:48px}}
+
+
+/* Keep the editor introduction within the title column beside the action stack. */
+.retrofit-editor .retrofit-header-copy{grid-column:1;grid-row:1;min-width:0;align-self:start}
+.retrofit-editor .retrofit-description{max-width:100%;margin:8px 0 0;color:#a7cad5;font:400 11px/1.4 'Segoe UI',Arial,sans-serif}
+.retrofit-editor .retrofit-header .editor-actions{grid-column:2;grid-row:1}
+@media(max-height:650px) and (min-width:621px){.retrofit-editor .retrofit-description{font-size:9px;line-height:1.3;margin-top:4px}}
+@media(max-width:620px){.retrofit-editor .retrofit-description{font-size:10px;line-height:1.35;margin-top:5px}}
+
+
+/* Anchor equipment and module controls to the bottom of the editor pane. */
+.retrofit-editor .editor-equipment-section{margin-top:auto;padding-top:16px}
+.retrofit-editor .editor-module-section{margin-bottom:0}
+.retrofit-editor .editor-fields{padding-bottom:20px}
+
+/* Make both annual gauges 20% larger while preserving their two-column layout. */
+.retrofit-editor .editor-annual-gauge{gap:9px;min-height:65px}
+.retrofit-editor .editor-annual-gauge>svg{width:58px;height:40px}
+.retrofit-editor .annual-value{font-size:27px}
+.retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:12px}
+.retrofit-editor .annual-delta{font-size:15px}
+@media(max-height:650px) and (min-width:621px){
+ .retrofit-editor .editor-equipment-section{padding-top:10px}
+ .retrofit-editor .editor-fields{padding-bottom:12px}
+ .retrofit-editor .editor-annual-gauge{min-height:50px;gap:6px}
+ .retrofit-editor .editor-annual-gauge>svg{width:37px;height:29px}
+ .retrofit-editor .annual-value{font-size:21px}
+ .retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:9.6px}
+ .retrofit-editor .annual-delta{font-size:12px}
+}
+@media(max-width:850px) and (min-width:621px){
+ .retrofit-editor .editor-annual-gauge>svg{width:33px;height:27px}
+ .retrofit-editor .annual-value{font-size:21.6px}
+ .retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:9.6px}
+ .retrofit-editor .annual-delta{font-size:12px}
+}
+@media(max-width:620px){
+ .retrofit-editor .editor-equipment-section{margin-top:0;padding-top:16px}
+ .retrofit-editor .editor-annual-gauge{min-height:56px;gap:6px}
+ .retrofit-editor .editor-annual-gauge>svg{width:37px;height:29px}
+ .retrofit-editor .annual-value{font-size:22.5px}
+ .retrofit-editor .annual-copy>span,.retrofit-editor .annual-copy small{font-size:9.6px}
+ .retrofit-editor .annual-delta{font-size:12px}
+}
+
+
+/* Annual comparison uses values without gauge graphics. */
+.retrofit-editor .retrofit-header-copy{width:169px;max-width:calc(100% - 8px)}
+.retrofit-editor .retrofit-description{width:100%;max-width:100%;overflow-wrap:normal}
+.retrofit-editor .editor-annual-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.retrofit-editor .editor-annual-metric{display:flex;align-items:flex-start;justify-content:center;min-width:0;min-height:68px;padding:4px 0;text-align:center;box-sizing:border-box}
+.retrofit-editor .editor-annual-metric .annual-copy{display:flex;flex-direction:column;align-items:center;width:100%;min-width:0}
+.retrofit-editor .editor-annual-metric .annual-copy>span{font-size:12px;white-space:normal}
+.retrofit-editor .editor-annual-metric .annual-reading{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:2px 5px;width:100%;margin-top:3px;line-height:1.2}
+.retrofit-editor .editor-annual-metric .annual-value{font-size:27px}
+.retrofit-editor .editor-annual-metric .annual-reading small{font-size:11px}
+.retrofit-editor .editor-annual-metric .annual-delta{display:block;margin-top:5px;font-size:11px;line-height:1.25;white-space:normal}
+.retrofit-editor .editor-annual-metric .annual-delta[hidden]{display:none}
+@media(max-height:650px) and (min-width:621px){
+ .retrofit-editor .retrofit-header-copy{width:138px}
+ .retrofit-editor .editor-annual-metric{min-height:56px}
+ .retrofit-editor .editor-annual-metric .annual-value{font-size:21px}
+ .retrofit-editor .editor-annual-metric .annual-copy>span{font-size:9.6px}
+ .retrofit-editor .editor-annual-metric .annual-reading small,.retrofit-editor .editor-annual-metric .annual-delta{font-size:9px}
+}
+@media(max-width:850px) and (min-width:621px){
+ .retrofit-editor .editor-annual-summary{gap:8px}
+ .retrofit-editor .editor-annual-metric .annual-value{font-size:21.6px}
+ .retrofit-editor .editor-annual-metric .annual-copy>span{font-size:9.6px}
+ .retrofit-editor .editor-annual-metric .annual-reading small,.retrofit-editor .editor-annual-metric .annual-delta{font-size:9px}
+}
+@media(max-width:620px){
+ .retrofit-editor .retrofit-header-copy{width:120px}
+ .retrofit-editor .editor-annual-summary{gap:8px}
+ .retrofit-editor .editor-annual-metric{min-height:60px}
+ .retrofit-editor .editor-annual-metric .annual-value{font-size:22.5px}
+ .retrofit-editor .editor-annual-metric .annual-copy>span{font-size:9.6px}
+ .retrofit-editor .editor-annual-metric .annual-reading small,.retrofit-editor .editor-annual-metric .annual-delta{font-size:9px}
+}

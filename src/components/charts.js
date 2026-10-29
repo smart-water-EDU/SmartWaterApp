@@ -32,14 +32,14 @@ function lineChart(container,points,{selected=30,onSelect}={}) {
   const w=740,h=230,l=48,r=16,t=22,b=35,ph=h-t-b;
   const max=Math.max(...points.flatMap(p=>[p.inlet,p.outlet]),1)*1.12;
   const x=m=>l+m/59*(w-l-r), y=v=>t+ph-v/max*ph;
-  const svg=svgNode('svg',{viewBox:`0 0 ${w} ${h}`,role:'img','aria-label':'S1 inlet and S2 outlet flow in L/min. Select a minute to inspect readings.'});
+  const svg=svgNode('svg',{viewBox:`0 0 ${w} ${h}`,role:'img','aria-label':'S-CWF-MAIN-IN inlet and S-CWF-MAIN-OUT outlet flow in L/min. Select a minute to inspect readings.'});
   const active=points.filter(p=>p.active);
   if(active.length) svg.append(svgNode('rect',{x:x(active[0].minute),y:t,width:Math.max(3,x(active.at(-1).minute)-x(active[0].minute)),height:ph,fill:'#e8ad61',opacity:.1}));
   for(let i=0;i<5;i++){const yy=t+ph*i/4;svg.append(svgNode('line',{x1:l,y1:yy,x2:w-r,y2:yy,class:'grid-line'}));svg.append(svgNode('text',{x:l-8,y:yy+4,'text-anchor':'end',class:'axis-label'},(max*(1-i/4)).toFixed(1)));}
   for(const [key,color] of [['inlet','#347f98'],['outlet','#627fa4']]) svg.append(svgNode('polyline',{points:points.map(p=>`${x(p.minute)},${y(p[key])}`).join(' '),fill:'none',stroke:color,'stroke-width':2.5}));
   svg.append(svgNode('line',{x1:x(selected),y1:t,x2:x(selected),y2:t+ph,stroke:'#e8ad61','stroke-dasharray':'4 4'}));
   for(let i=0;i<60;i+=10) svg.append(svgNode('text',{x:x(i),y:h-12,'text-anchor':'middle',class:'axis-label'},`${i} min`));
-  points.forEach(p=>{const target=svgNode('rect',{x:x(p.minute)-5,y:t,width:11,height:ph,fill:'transparent',tabindex:p.minute%5===0?0:-1,role:'button','aria-label':`Minute ${p.minute}: S1 ${p.inlet.toFixed(2)}, S2 ${p.outlet.toFixed(2)} L/min`});target.append(svgNode('title',{},`Minute ${p.minute} · S1 ${p.inlet.toFixed(2)} · S2 ${p.outlet.toFixed(2)} L/min`)); target.addEventListener('click',()=>onSelect?.(p.minute));target.addEventListener('keydown',e=>{if(e.key==='Enter')onSelect?.(p.minute);});svg.append(target);});
+  points.forEach(p=>{const target=svgNode('rect',{x:x(p.minute)-5,y:t,width:11,height:ph,fill:'transparent',tabindex:p.minute%5===0?0:-1,role:'button','aria-label':`Minute ${p.minute}: S-CWF-MAIN-IN ${p.inlet.toFixed(2)}, S-CWF-MAIN-OUT ${p.outlet.toFixed(2)} L/min`});target.append(svgNode('title',{},`Minute ${p.minute} · S-CWF-MAIN-IN ${p.inlet.toFixed(2)} · S-CWF-MAIN-OUT ${p.outlet.toFixed(2)} L/min`)); target.addEventListener('click',()=>onSelect?.(p.minute));target.addEventListener('keydown',e=>{if(e.key==='Enter')onSelect?.(p.minute);});svg.append(target);});
   container.append(svg);
 }
 

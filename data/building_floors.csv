@@ -1,4 +1,4 @@
-﻿floor_id,gross_area_m2,common_area_m2,tenant_area_m2,module_count,color,section_x,section_y,section_width,section_height
+floor_id,gross_area_m2,common_area_m2,tenant_area_m2,module_count,color,section_x,section_y,section_width,section_height
 U1,2350,470,1880,6,#a9c9dc,105,502,570.7142857142857,58
 L1,2800,560,2240,8,#a8d0c9,105,430,680,58
 L2,2800,560,2240,5,#bbc8df,105,358,680,58

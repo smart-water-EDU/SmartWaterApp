@@ -1,4 +1,4 @@
-﻿module_id,floor_id,area_m2,tenant_use,section_x,section_y,section_width,section_height
+module_id,floor_id,area_m2,tenant_use,section_x,section_y,section_width,section_height
 U1-01,U1,313.3333333333333,retail,105,502,90.1190476190476,58
 U1-02,U1,313.3333333333333,supermarket,200.1190476190476,502,90.1190476190476,58
 U1-03,U1,313.3333333333333,supermarket,295.2380952380952,502,90.1190476190476,58

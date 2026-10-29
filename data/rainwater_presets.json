@@ -1,0 +1,13 @@
+{
+  "schemaVersion":1,
+  "label":"Educational non-potable water-use assumptions — editable, not measured building data",
+  "storageCapacityM3":20,
+  "pumpCapacityLMin":30,
+  "collectionEfficiency":0.9,
+  "consumers":[
+    {"id":"irrigation","name":"Irrigation","icon":"irrigation.png","dailyDemandL":1200,"hours":[5,20],"weights":[0.5,0.5],"weekdayFactors":[1,1,1,1,1,1,1],"monthFactors":[0,0,0.1,0.3,0.7,1,1,0.9,0.5,0.2,0,0]},
+    {"id":"flushing","name":"Flush tanks","icon":"toilet-flushing.png","dailyDemandL":2500,"hours":[7,8,9,10,11,12,13,14,15,16,17,18],"weights":[0.04,0.06,0.08,0.1,0.1,0.1,0.1,0.1,0.1,0.08,0.08,0.06],"weekdayFactors":[1,1,1,1,1,0.6,0.5],"monthFactors":[1,1,1,1,1,1,1,1,1,1,1,1]},
+    {"id":"cooling","name":"Cooling","icon":"cooling.png","dailyDemandL":1800,"hours":[9,10,11,12,13,14,15,16,17,18],"weights":[0.05,0.08,0.1,0.12,0.15,0.15,0.12,0.1,0.08,0.05],"weekdayFactors":[1,1,1,1,1,0.5,0.3],"monthFactors":[0,0,0.1,0.25,0.6,1,1,0.9,0.5,0.1,0,0]},
+    {"id":"washing","name":"Parking washing","icon":"parking-washing.png","dailyDemandL":500,"hours":[7,10,15],"weights":[0.2,0.4,0.4],"weekdayFactors":[1,1,1,1,1,0.2,0.2],"monthFactors":[0.6,0.6,0.8,1,1,1,1,1,1,1,0.8,0.6]}
+  ]
+}

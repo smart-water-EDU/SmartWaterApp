@@ -10,17 +10,17 @@ function flowBalance(inlet,outlet,withdrawal=0,threshold=1) {
     alarm:unexplained>threshold,reverse:unexplained < -threshold};
 }
 const cases = {
-  historical:{label:'Historical dataset',description:'Read actual simulated S1/S2 values at the selected clock hour. Meter volumes remain authoritative; sensor noise and offsets can cause unexplained differences.'},
-  normal:{label:'Normal operation',leak:0,description:'No withdrawals between S1 and S2. Small deterministic measurement noise is expected.'},
+  historical:{label:'Historical dataset',description:'Read actual simulated S-CWF-MAIN-IN/S-CWF-MAIN-OUT values at the selected clock hour. Meter volumes remain authoritative; sensor noise and offsets can cause unexplained differences.'},
+  normal:{label:'Normal operation',leak:0,description:'No withdrawals between S-CWF-MAIN-IN and S-CWF-MAIN-OUT. Small deterministic measurement noise is expected.'},
   small:{label:'Small leak · 0.7 L/min',leak:.7,description:'A small leak may stay below the detection threshold. Lower the threshold to investigate.'},
   significant:{label:'Significant leak · 9 L/min',leak:9,description:'A steady 9 L/min leak begins at minute 20 and ends at minute 46. No legitimate withdrawals between sensors.'},
   noise:{label:'Sensor anomaly · no physical leak',leak:0,description:'A downstream sensor offset begins at minute 20. A balance alarm alone cannot prove a physical leak.'},
-  branch:{label:'9 L/min leak + legitimate branch',leak:9,withdrawal:3,description:'B1 measures a legitimate 3 L/min branch between S1 and S2. Subtract B1 before estimating leakage.'}
+  branch:{label:'9 L/min leak + legitimate branch',leak:9,withdrawal:3,description:'S-CWF-BRANCH measures a legitimate 3 L/min branch between S-CWF-MAIN-IN and S-CWF-MAIN-OUT. Subtract S-CWF-BRANCH before estimating leakage.'}
 };
 function sensorSeries(engine,index,caseId='historical',segment='main') {
   const row=engine.dataset.rows[index], c=engine.columnIndex;
   const event=engine.dataset.events.find(e=>Date.parse(e.start)<=+engine.date(index) && +engine.date(index)<Date.parse(e.end));
-  let base=row[c.OUTLET]/6000;
+  let base=engine.sensorValue('S-WWF-TANK-IN',index);
   if(segment.startsWith('branch-')) base=engine.volumeCL(index,{floor:segment.slice(7)})/6000;
   // Training withdrawals/offsets require enough through-flow to remain physical.
   // Historical meter values are never raised or changed.
@@ -33,8 +33,8 @@ function sensorSeries(engine,index,caseId='historical',segment='main') {
     const offset=active && caseId==='noise' ? 3.2 : (caseId==='historical' && segment==='main' ? event?.sensorOffsetLMin||0 : 0);
     // Shared demand fluctuations plus small independent sensor noise; total meter is unchanged.
     const demand=base*(1+.04*Math.sin(minute*.6));
-    const inlet=demand+leak;
-    const outlet=demand-withdrawal-offset+Math.min(.06,demand*.02)*Math.sin(minute*1.7);
+    const inlet=caseId==='historical'&&segment==='main'?engine.sensorValue('S-CWF-MAIN-IN',index)+(demand-base):demand+leak;
+    const outlet=(caseId==='historical'&&segment==='main'?engine.sensorValue('S-CWF-MAIN-OUT',index)+(demand-base):demand-withdrawal-offset)+Math.min(.06,demand*.02)*Math.sin(minute*1.7);
     return {minute,inlet,outlet,withdrawal,active:caseId==='historical' ? !!event && segment==='main' : active,
       trueLeak:leak,offset};
   });

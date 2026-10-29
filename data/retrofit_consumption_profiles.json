@@ -57,7 +57,8 @@
       ],
       "peakFactor": 1.7,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.3
     },
     {
       "id": "retail",
@@ -114,7 +115,8 @@
       ],
       "peakFactor": 1.8,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.22
     },
     {
       "id": "restaurant",
@@ -171,7 +173,8 @@
       ],
       "peakFactor": 2.4,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.45
     },
     {
       "id": "cafe",
@@ -228,7 +231,8 @@
       ],
       "peakFactor": 2.1,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.4
     },
     {
       "id": "supermarket",
@@ -285,7 +289,8 @@
       ],
       "peakFactor": 1.8,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.2
     },
     {
       "id": "fitness",
@@ -342,7 +347,8 @@
       ],
       "peakFactor": 2.5,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.35
     },
     {
       "id": "clinic",
@@ -399,7 +405,8 @@
       ],
       "peakFactor": 2,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.4
     },
     {
       "id": "public",
@@ -456,7 +463,8 @@
       ],
       "peakFactor": 1.8,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.3
     },
     {
       "id": "vacant",
@@ -513,7 +521,8 @@
       ],
       "peakFactor": 1.2,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.15
     },
     {
       "id": "common",
@@ -570,7 +579,240 @@
       ],
       "peakFactor": 1.6,
       "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
-      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks."
+      "notes": "Weekday adjustments multiply the daily total. Reduced closed-day operation represents cleaning and standby. Off-hours weights model background use; weights always sum to 1. Peak factor estimates short-duration demand, not measured peaks.",
+      "hotWaterShare": 0.15
+    },
+    {
+      "id": "parking",
+      "label": "Parking",
+      "specificConsumption": 0.15,
+      "unit": "L/m²/operating day",
+      "openingHours": [
+        0,
+        24
+      ],
+      "weekdayAdjustment": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "weekdayOrder": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "hourlyWeights": [
+        0.03677766592706815,
+        0.036777695424454374,
+        0.03677799323657787,
+        0.03678038667834389,
+        0.03679566951938319,
+        0.03687299643182459,
+        0.0371818272854845,
+        0.03814968780855411,
+        0.04050721234271472,
+        0.04489551120897752,
+        0.05092633336326465,
+        0.0565237229818468,
+        0.05884426151007949,
+        0.0565237229818468,
+        0.05092633336326465,
+        0.04489551120897752,
+        0.04050721234271472,
+        0.03814968780855411,
+        0.0371818272854845,
+        0.03687299643182459,
+        0.03679566951938319,
+        0.03678038667834389,
+        0.03677799323657787,
+        0.036777695424454374
+      ],
+      "peakFactor": 1.2,
+      "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
+      "notes": "Editable educational assumption for scenario studies; not a measured benchmark.",
+      "hotWaterShare": 0.1
+    },
+    {
+      "id": "storage",
+      "label": "Storage",
+      "specificConsumption": 0.1,
+      "unit": "L/m²/operating day",
+      "openingHours": [
+        0,
+        24
+      ],
+      "weekdayAdjustment": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "weekdayOrder": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "hourlyWeights": [
+        0.03677766592706815,
+        0.036777695424454374,
+        0.03677799323657787,
+        0.03678038667834389,
+        0.03679566951938319,
+        0.03687299643182459,
+        0.0371818272854845,
+        0.03814968780855411,
+        0.04050721234271472,
+        0.04489551120897752,
+        0.05092633336326465,
+        0.0565237229818468,
+        0.05884426151007949,
+        0.0565237229818468,
+        0.05092633336326465,
+        0.04489551120897752,
+        0.04050721234271472,
+        0.03814968780855411,
+        0.0371818272854845,
+        0.03687299643182459,
+        0.03679566951938319,
+        0.03678038667834389,
+        0.03677799323657787,
+        0.036777695424454374
+      ],
+      "peakFactor": 1.2,
+      "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
+      "notes": "Editable educational assumption for scenario studies; not a measured benchmark.",
+      "hotWaterShare": 0.1
+    },
+    {
+      "id": "educational",
+      "label": "Educational",
+      "specificConsumption": 2.4,
+      "unit": "L/m²/operating day",
+      "openingHours": [
+        8,
+        17
+      ],
+      "weekdayAdjustment": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.12,
+        0.08
+      ],
+      "weekdayOrder": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "hourlyWeights": [
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.08837780823924606,
+        0.09795210904320711,
+        0.11111003359667108,
+        0.12332230389969946,
+        0.12838520744696902,
+        0.12332230389969946,
+        0.11111003359667108,
+        0.09795210904320711,
+        0.08837780823924606,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891
+      ],
+      "peakFactor": 1.7,
+      "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
+      "notes": "Editable educational assumption for scenario studies; not a measured benchmark.",
+      "hotWaterShare": 0.3
+    },
+    {
+      "id": "training",
+      "label": "Training",
+      "specificConsumption": 2.8,
+      "unit": "L/m²/operating day",
+      "openingHours": [
+        8,
+        17
+      ],
+      "weekdayAdjustment": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.12,
+        0.08
+      ],
+      "weekdayOrder": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "hourlyWeights": [
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.08837780823924606,
+        0.09795210904320711,
+        0.11111003359667108,
+        0.12332230389969946,
+        0.12838520744696902,
+        0.12332230389969946,
+        0.11111003359667108,
+        0.09795210904320711,
+        0.08837780823924606,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891,
+        0.002006018866358891
+      ],
+      "peakFactor": 1.7,
+      "assumptions": "Illustrative educational parameter; not a Norwegian benchmark or measured building consumption.",
+      "notes": "Editable educational assumption for scenario studies; not a measured benchmark.",
+      "hotWaterShare": 0.35
     }
   ]
 }

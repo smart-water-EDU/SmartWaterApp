@@ -1,0 +1,39 @@
+[
+  {
+    "id": "E01",
+    "name": "Small sustained main-pipe leak",
+    "start": "2026-02-12T01:00:00Z",
+    "end": "2026-02-12T10:00:00Z",
+    "leakLMin": 0.7,
+    "type": "leak",
+    "segment": "main"
+  },
+  {
+    "id": "E02",
+    "name": "9 L/min main-pipe leak",
+    "start": "2026-06-17T09:00:00Z",
+    "end": "2026-06-17T18:00:00Z",
+    "leakLMin": 9,
+    "type": "leak",
+    "segment": "main"
+  },
+  {
+    "id": "E03",
+    "name": "Downstream sensor offset — no physical loss",
+    "start": "2026-09-08T12:00:00Z",
+    "end": "2026-09-08T16:00:00Z",
+    "leakLMin": 0,
+    "sensorOffsetLMin": 2.4,
+    "type": "sensor",
+    "segment": "main"
+  },
+  {
+    "id": "E04",
+    "name": "Autumn main-pipe leak",
+    "start": "2026-11-04T02:00:00Z",
+    "end": "2026-11-04T08:00:00Z",
+    "leakLMin": 4,
+    "type": "leak",
+    "segment": "main"
+  }
+]

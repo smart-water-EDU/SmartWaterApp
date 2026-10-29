@@ -265,3 +265,8 @@
 #building-network-svg [data-module-id] { cursor: pointer; }
 #building-network-svg [data-module-id]:focus { outline: none; filter: drop-shadow(0 0 2px #3286bb); }
 
+
+/* Keep the sewage tank readable in both the dashboard and retrofit editor. */
+body.theme-control-room :is(#building-network-svg,.retrofit-svg) .sewage-tank :is(path,line,ellipse) { stroke: #c2d2dc; }
+body.theme-control-room :is(#building-network-svg,.retrofit-svg) .sewage-tank path { fill: #526775; }
+:is(#building-network-svg,.retrofit-svg) [data-network-component="heat-exchanger"] :is(path,line,polyline) { stroke: #b6cbd6; }

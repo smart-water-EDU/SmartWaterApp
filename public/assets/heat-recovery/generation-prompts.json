@@ -1,0 +1,41 @@
+{
+  "generator": "Built-in image_gen tool",
+  "transparentBackground": true,
+  "assets": [
+    {
+      "id": "plate-exchanger",
+      "file": "plate-exchanger.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: a compact plate heat exchanger: a stack of slim corrugated stainless steel plates between two dark blue end plates, four pipe ports, small orange warm-water accents. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    },
+    {
+      "id": "tubular-exchanger",
+      "file": "tubular-exchanger.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: a horizontal shell-and-tube heat exchanger: a short steel-blue cylindrical shell with visible small parallel tubes in the round end, two blue and two orange pipe connections, supported on two feet. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    },
+    {
+      "id": "spiral-exchanger",
+      "file": "spiral-exchanger.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: a spiral heat exchanger: a round steel-blue industrial housing with an exposed concentric spiral channel face, blue inlet pipe and muted orange outlet pipe. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    },
+    {
+      "id": "water-preheat",
+      "file": "water-preheat.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: domestic water preheating: a small blue hot-water cylinder next to a simple faucet and a blue water droplet, orange warming coil accent around lower cylinder. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    },
+    {
+      "id": "ventilation-preheat",
+      "file": "ventilation-preheat.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: ventilation air preheating: a compact blue ventilation duct with a square fan and heating coil grille, three soft orange warm airflow arrows. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    },
+    {
+      "id": "space-heating",
+      "file": "space-heating.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: space heating: a clean blue five-panel wall radiator with two orange warm air curls rising, short pipe fittings below. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    },
+    {
+      "id": "thermal-storage",
+      "file": "thermal-storage.png",
+      "prompt": "Use case: scientific-educational. Asset type: one PNG thumbnail icon for Smart Drops water-management heat recovery equipment selector. Subject: thermal storage: a tall insulated blue buffer tank with a small thermometer and a cutaway orange warm thermal layer, two pipe ports. Create ONE centered isolated clipart icon, with a genuinely transparent background. Consistent family style: polished clean semi-flat isometric educational engineering clipart, friendly rounded forms, crisp dark steel-blue outlines, restrained subtle shading. Main colors cadetblue, steelblue, powderblue and turquoise; small nuances of warm muted orange for heat. No text, letters, numbers, labels, logos, watermark, scenery, card border or ground plane. Square composition with generous 12% transparent padding around entire object. Readable and distinct at 64px. This is an icon asset, not a UI screenshot."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-﻿event_id,name,start_utc,end_utc,leak_l_min,event_type,segment
-E01,Small sustained main-pipe leak,2026-02-12T01:00:00Z,2026-02-12T10:00:00Z,0.7,leak,main
-E02,9 L/min main-pipe leak,2026-06-17T09:00:00Z,2026-06-17T18:00:00Z,9,leak,main
-E03,Downstream sensor offset — no physical loss,2026-09-08T12:00:00Z,2026-09-08T16:00:00Z,0,sensor,main
-E04,Autumn main-pipe leak,2026-11-04T02:00:00Z,2026-11-04T08:00:00Z,4,leak,main
+event_id,name,start_utc,end_utc,leak_L_min,sensor_offset_L_min,type
+E01,Small sustained main-pipe leak,2026-02-12T01:00:00Z,2026-02-12T10:00:00Z,0.7,0,leak
+E02,9 L/min main-pipe leak,2026-06-17T09:00:00Z,2026-06-17T18:00:00Z,9,0,leak
+E03,Downstream sensor offset — no physical loss,2026-09-08T12:00:00Z,2026-09-08T16:00:00Z,0,2.4,sensor
+E04,Autumn main-pipe leak,2026-11-04T02:00:00Z,2026-11-04T08:00:00Z,4,0,leak

@@ -1,0 +1,594 @@
+{
+  "schemaVersion": 2,
+  "label": "Synthetic sensors — hourly 2026",
+  "tagConvention": "S-[type]-[position]",
+  "types": {
+    "CWF": "Cold water flow",
+    "HWF": "Hot water flow",
+    "TWF": "Total water flow",
+    "WWF": "Wastewater flow",
+    "RWF": "Rainwater flow",
+    "CWT": "Cold water temperature",
+    "HWT": "Hot water temperature",
+    "WWT": "Wastewater temperature",
+    "CWP": "Cold water pressure",
+    "HWP": "Hot water pressure",
+    "EE": "Electrical energy",
+    "TE": "Thermal energy",
+    "PWR": "Pump electrical power",
+    "WWL": "Wastewater tank level"
+  },
+  "columns": [
+    {
+      "id": "S-TWF-U1-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "U1-01",
+      "floor": "U1"
+    },
+    {
+      "id": "S-TWF-U1-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "U1-02",
+      "floor": "U1"
+    },
+    {
+      "id": "S-TWF-U1-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "U1-03",
+      "floor": "U1"
+    },
+    {
+      "id": "S-TWF-U1-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "U1-04",
+      "floor": "U1"
+    },
+    {
+      "id": "S-TWF-U1-05",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "U1-05",
+      "floor": "U1"
+    },
+    {
+      "id": "S-TWF-U1-06",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "U1-06",
+      "floor": "U1"
+    },
+    {
+      "id": "S-TWF-L1-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-01",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-02",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-03",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-04",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-05",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-05",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-06",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-06",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-07",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-07",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L1-08",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L1-08",
+      "floor": "L1"
+    },
+    {
+      "id": "S-TWF-L2-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L2-01",
+      "floor": "L2"
+    },
+    {
+      "id": "S-TWF-L2-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L2-02",
+      "floor": "L2"
+    },
+    {
+      "id": "S-TWF-L2-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L2-03",
+      "floor": "L2"
+    },
+    {
+      "id": "S-TWF-L2-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L2-04",
+      "floor": "L2"
+    },
+    {
+      "id": "S-TWF-L2-05",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L2-05",
+      "floor": "L2"
+    },
+    {
+      "id": "S-TWF-L3-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L3-01",
+      "floor": "L3"
+    },
+    {
+      "id": "S-TWF-L3-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L3-02",
+      "floor": "L3"
+    },
+    {
+      "id": "S-TWF-L3-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L3-03",
+      "floor": "L3"
+    },
+    {
+      "id": "S-TWF-L3-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L3-04",
+      "floor": "L3"
+    },
+    {
+      "id": "S-TWF-L4-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L4-01",
+      "floor": "L4"
+    },
+    {
+      "id": "S-TWF-L4-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L4-02",
+      "floor": "L4"
+    },
+    {
+      "id": "S-TWF-L4-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L4-03",
+      "floor": "L4"
+    },
+    {
+      "id": "S-TWF-L4-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L4-04",
+      "floor": "L4"
+    },
+    {
+      "id": "S-TWF-L5-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L5-01",
+      "floor": "L5"
+    },
+    {
+      "id": "S-TWF-L5-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L5-02",
+      "floor": "L5"
+    },
+    {
+      "id": "S-TWF-L5-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L5-03",
+      "floor": "L5"
+    },
+    {
+      "id": "S-TWF-L5-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L5-04",
+      "floor": "L5"
+    },
+    {
+      "id": "S-TWF-L6-01",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L6-01",
+      "floor": "L6"
+    },
+    {
+      "id": "S-TWF-L6-02",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L6-02",
+      "floor": "L6"
+    },
+    {
+      "id": "S-TWF-L6-03",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L6-03",
+      "floor": "L6"
+    },
+    {
+      "id": "S-TWF-L6-04",
+      "kind": "flow",
+      "network": "total",
+      "unit": "L/min",
+      "simulated": true,
+      "module": "L6-04",
+      "floor": "L6"
+    },
+    {
+      "id": "S-CWF-U1",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "U1"
+    },
+    {
+      "id": "S-HWF-U1",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "U1"
+    },
+    {
+      "id": "S-CWF-L1",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L1"
+    },
+    {
+      "id": "S-HWF-L1",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L1"
+    },
+    {
+      "id": "S-CWF-L2",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L2"
+    },
+    {
+      "id": "S-HWF-L2",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L2"
+    },
+    {
+      "id": "S-CWF-L3",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L3"
+    },
+    {
+      "id": "S-HWF-L3",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L3"
+    },
+    {
+      "id": "S-CWF-L4",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L4"
+    },
+    {
+      "id": "S-HWF-L4",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L4"
+    },
+    {
+      "id": "S-CWF-L5",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L5"
+    },
+    {
+      "id": "S-HWF-L5",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L5"
+    },
+    {
+      "id": "S-CWF-L6",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L6"
+    },
+    {
+      "id": "S-HWF-L6",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true,
+      "floor": "L6"
+    },
+    {
+      "id": "S-CWF-INLET",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-CWF-RISER",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-HWF-MAIN",
+      "kind": "flow",
+      "network": "hot",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-WWF-TANK-IN",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-CWF-MAIN-IN",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-CWF-MAIN-OUT",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-CWF-BRANCH",
+      "kind": "flow",
+      "network": "cold",
+      "unit": "L/min",
+      "simulated": true
+    },
+    {
+      "id": "S-EE-CW-PUMP",
+      "kind": "energy",
+      "network": "cold",
+      "unit": "kWh/hour",
+      "simulated": true
+    },
+    {
+      "id": "S-EE-HW-PUMP",
+      "kind": "energy",
+      "network": "cold",
+      "unit": "kWh/hour",
+      "simulated": true
+    },
+    {
+      "id": "S-TE-HW-HEATER",
+      "kind": "energy",
+      "network": "cold",
+      "unit": "kWh/hour",
+      "simulated": true
+    },
+    {
+      "id": "S-CWT-INLET",
+      "kind": "temperature",
+      "network": "cold",
+      "unit": "°C",
+      "simulated": true
+    },
+    {
+      "id": "S-HWT-SUPPLY",
+      "kind": "temperature",
+      "network": "hot",
+      "unit": "°C",
+      "simulated": true
+    },
+    {
+      "id": "S-WWT-OUTLET",
+      "kind": "temperature",
+      "network": "sewage",
+      "unit": "°C",
+      "simulated": true
+    },
+    {
+      "id": "S-CWP-PUMP",
+      "kind": "pressure",
+      "network": "cold",
+      "unit": "bar",
+      "simulated": true
+    },
+    {
+      "id": "S-HWP-PUMP",
+      "kind": "pressure",
+      "network": "hot",
+      "unit": "bar",
+      "simulated": true
+    },
+    {
+      "id": "S-PWR-CW-PUMP",
+      "kind": "pump",
+      "network": "cold",
+      "unit": "kW",
+      "simulated": true
+    },
+    {
+      "id": "S-PWR-HW-PUMP",
+      "kind": "pump",
+      "network": "hot",
+      "unit": "kW",
+      "simulated": true
+    },
+    {
+      "id": "S-RWF-ROOF",
+      "kind": "flow",
+      "network": "rainwater",
+      "unit": "L/min",
+      "simulated": true,
+      "available": false
+    },
+    {
+      "id": "S-WWL-TANK",
+      "kind": "level",
+      "network": "sewage",
+      "unit": "%",
+      "simulated": true,
+      "capacityLitres": 2000,
+      "initialVolumeLitres": 800,
+      "residenceHours": 1.5
+    },
+    {
+      "id": "S-WWF-TANK-OUT",
+      "kind": "flow",
+      "network": "sewage",
+      "unit": "L/min",
+      "simulated": true
+    }
+  ]
+}

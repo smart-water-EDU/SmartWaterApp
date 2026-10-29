@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "label": "Editable educational heat-recovery presets — not manufacturer specifications",
+  "exchangers": [
+    {"id":"plate","name":"Plate exchanger","icon":"plate-exchanger.png","effectivenessPercent":65,"capacityKW":60,"pressureDropKPa":35,"minApproachC":3,"sourceRangeLMin":[5,100],"service":"Removable plate pack. Allow for screening, inspection and cleaning access."},
+    {"id":"tubular","name":"Shell & tube","icon":"tubular-exchanger.png","effectivenessPercent":55,"capacityKW":45,"pressureDropKPa":25,"minApproachC":5,"sourceRangeLMin":[5,120],"service":"Larger flow passages. Allow access to inspect and clean the tube bundle."},
+    {"id":"spiral","name":"Spiral exchanger","icon":"spiral-exchanger.png","effectivenessPercent":70,"capacityKW":75,"pressureDropKPa":20,"minApproachC":3,"sourceRangeLMin":[5,150],"service":"Wide spiral passage. Plan accessible connections and a fouling inspection strategy."}
+  ],
+  "purposes": [
+    {"id":"water","name":"Preheat water","icon":"water-preheat.png","defaultName":"Water preheater","targetTemperatureC":30,"extraKey":"designFlowLMin","extraLabel":"Design water flow · L/min","extraDefault":20},
+    {"id":"ventilation","name":"Preheat ventilation air","icon":"ventilation-preheat.png","defaultName":"Ventilation coil","targetTemperatureC":18,"extraKey":"airFlowM3H","extraLabel":"Design air flow · m³/h","extraDefault":500},
+    {"id":"space","name":"Space heating","icon":"space-heating.png","defaultName":"Space-heating circuit","targetTemperatureC":35,"extraKey":"designLoadKW","extraLabel":"Design heat load · kW","extraDefault":20},
+    {"id":"storage","name":"Thermal storage","icon":"thermal-storage.png","defaultName":"Thermal buffer","targetTemperatureC":45,"extraKey":"volumeLitres","extraLabel":"Storage volume · L","extraDefault":500}
+  ]
+}

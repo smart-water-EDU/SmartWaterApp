@@ -510,7 +510,7 @@
     "segments": [
       {
         "id": "main",
-        "label": "Main inlet · S1 → S2"
+        "label": "Main inlet · S-CWF-MAIN-IN → S-CWF-MAIN-OUT"
       },
       {
         "id": "heater-feed",
@@ -559,15 +559,15 @@
     ],
     "sensors": [
       {
-        "id": "S1",
+        "id": "S-CWF-MAIN-IN",
         "label": "Main inlet sensor"
       },
       {
-        "id": "S2",
+        "id": "S-CWF-MAIN-OUT",
         "label": "Downstream distribution sensor"
       },
       {
-        "id": "B1",
+        "id": "S-CWF-BRANCH",
         "label": "Illustrative legitimate branch withdrawal"
       }
     ]

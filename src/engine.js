@@ -1,8 +1,16 @@
+import {sensorTag,tagBuildingSensors} from './sensor-tags.js';
+import {aggregate,waterSplit,validateSource} from './data-model.js';
 /* Web edition: same documented model logic, exposed through a small browser namespace. */
 window.SmartDrops = window.SmartDrops || {};
 (() => {
-/** All stored volumes are integer centilitres. Convert only at display boundaries. */
-function createEngine(building, profiles, dataset) {
+/** CSV source is L/hour; the transient aggregate view uses integer cL for exact meter reconciliation. */
+function createEngine(building, profiles, source) {
+  building=tagBuildingSensors(building);
+  validateSource(building,source);
+  const dataset=aggregate(building,source);
+  const sensorIndex=Object.fromEntries(source.sensors.columns.map((c,j)=>[c.id,j]));
+  const sensorValue=(id,i)=>source.sensors.rows[Math.max(0,Math.min(8759,Math.trunc(i)))][sensorIndex[sensorTag(id)]]??null;
+  const split=(i,selection)=>waterSplit(building,source,Math.max(0,Math.min(8759,Math.trunc(i))),selection);
   const profileMap = Object.fromEntries(profiles.profiles.map(p => [p.id, p]));
   const modules = building.floors.flatMap(f => f.modules.map(m => ({ ...m, floor: f.id })));
   const columnIndex = Object.fromEntries(dataset.columns.map((c,i) => [c.id,i]));
@@ -50,11 +58,12 @@ function createEngine(building, profiles, dataset) {
   }
   function moduleStats(id,i) {
     const module=modules.find(m=>m.id===id); if(!module) return null;
-    const p=profileMap[module.use], {day}=bounds(i);
+    const baseProfile=profileMap[module.use];
+    const p=module.scenarioSettings?{...baseProfile,openingHours:[module.scenarioSettings.openingHour,module.scenarioSettings.closingHour]}:baseProfile, {day}=bounds(i);
     const hours=Array.from({length:24},(_,h)=>volumeCL(day+h,{module:id})/6000);
     return {...module,profile:p,dailyM3:sumCL(day,day+24,{module:id})/100000,peakLMin:Math.max(...hours)*p.peakFactor};
   }
-  return {building,profiles:profileMap,dataset,modules,columnIndex,clamp,date,indexAt,volumeCL,sumCL,bounds,metrics,series,distribution,moduleStats};
+  return {building,source,sensorValue,waterSplit:split,profiles:profileMap,dataset,modules,columnIndex,clamp,date,indexAt,volumeCL,sumCL,bounds,metrics,series,distribution,moduleStats};
 }
 
 window.SmartDrops.engine = { createEngine };

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "label": "Simulated 2026 Water Monitoring Data — Educational Dataset",
+  "seed": 20260101,
+  "start": "2026-01-01T00:00:00Z",
+  "periods": 8760,
+  "periodMinutes": 60,
+  "waterUnit": "L per hourly period",
+  "timeConvention": "UTC timestamps used as a fixed nominal building clock. No DST.",
+  "files": {
+    "cold": "module_cold_water_2026.csv",
+    "hot": "module_hot_water_2026.csv",
+    "common": "common_water_2026.csv",
+    "sensors": "sensor_readings_2026.csv",
+    "registry": "sensors.json",
+    "events": "leak_events.json"
+  },
+  "sensorPolicy": "Derived educational channels. After editing water CSVs, npm run data:build regenerates sensor data and the browser bundle. Rainwater is unavailable (blank), not measured zero."
+}

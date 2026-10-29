@@ -86,8 +86,8 @@ function renderNetworkDiagram(container,engine,state,{onSelect,onSegment,onSenso
     route('cold','main','M25 657 H840');
     route('cold','heater-feed','M175 657 V642');
     const meter=svgNode('rect',{x:112,y:645,width:48,height:24,rx:4,fill:'#e4f0f6',stroke:pipeColors.cold,'stroke-width':1.5});
-    svg.append(click(meter,()=>onSensor('S1'),'Simulated inlet meter M1'));svg.append(svgNode('text',{x:136,y:661,fill:'#315d79','text-anchor':'middle','font-size':10,'font-weight':700},'M1'));
-    for(const [id,x] of [['S1',340],['S2',640]]){
+    svg.append(click(meter,()=>onSensor('S-CWF-MAIN-IN'),'Simulated inlet meter M1'));svg.append(svgNode('text',{x:136,y:661,fill:'#315d79','text-anchor':'middle','font-size':10,'font-weight':700},'M1'));
+    for(const [id,x] of [['S-CWF-MAIN-IN',340],['S-CWF-MAIN-OUT',640]]){
       const sensor=svgNode('g',{'data-sensor':id});sensor.append(svgNode('circle',{cx:x,cy:657,r:13,fill:'#e5f0f6',stroke:pipeColors.cold,'stroke-width':2}));sensor.append(svgNode('text',{x,y:661,fill:'#315d79','text-anchor':'middle','font-size':10,'font-weight':700},id));
       svg.append(click(sensor,()=>onSensor(id),`Inspect cold-water sensor ${id}`));
     }
