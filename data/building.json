@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "name": "Kremmergården",
+  "location": "Ålesund, Norway",
+  "disclaimer": "Symbolic educational model. Areas, geometry, tenants, pipes and sensors are assumed, not verified architectural or operational information.",
+  "totalGrossAreaM2": 16000,
+  "commonAreaFraction": 0.2,
+  "sectionViewBox": "0 0 960 720",
+  "floors": [
+    {
+      "id": "U1",
+      "grossAreaM2": 2350,
+      "commonAreaM2": 470,
+      "color": "#a9c9dc",
+      "geometry": {
+        "x": 105,
+        "y": 502,
+        "width": 570.7142857142857,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "U1-01",
+          "areaM2": 313.3333333333333,
+          "use": "retail",
+          "geometry": {
+            "x": 105,
+            "y": 502,
+            "width": 90.1190476190476,
+            "height": 58
+          }
+        },
+        {
+          "id": "U1-02",
+          "areaM2": 313.3333333333333,
+          "use": "supermarket",
+          "geometry": {
+            "x": 200.1190476190476,
+            "y": 502,
+            "width": 90.1190476190476,
+            "height": 58
+          }
+        },
+        {
+          "id": "U1-03",
+          "areaM2": 313.3333333333333,
+          "use": "supermarket",
+          "geometry": {
+            "x": 295.2380952380952,
+            "y": 502,
+            "width": 90.1190476190476,
+            "height": 58
+          }
+        },
+        {
+          "id": "U1-04",
+          "areaM2": 313.3333333333333,
+          "use": "fitness",
+          "geometry": {
+            "x": 390.35714285714283,
+            "y": 502,
+            "width": 90.1190476190476,
+            "height": 58
+          }
+        },
+        {
+          "id": "U1-05",
+          "areaM2": 313.3333333333333,
+          "use": "retail",
+          "geometry": {
+            "x": 485.4761904761904,
+            "y": 502,
+            "width": 90.1190476190476,
+            "height": 58
+          }
+        },
+        {
+          "id": "U1-06",
+          "areaM2": 313.3333333333333,
+          "use": "public",
+          "geometry": {
+            "x": 580.5952380952381,
+            "y": 502,
+            "width": 90.1190476190476,
+            "height": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "L1",
+      "grossAreaM2": 2800,
+      "commonAreaM2": 560,
+      "color": "#a8d0c9",
+      "geometry": {
+        "x": 105,
+        "y": 430,
+        "width": 680,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "L1-01",
+          "areaM2": 280,
+          "use": "retail",
+          "geometry": {
+            "x": 105,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-02",
+          "areaM2": 280,
+          "use": "retail",
+          "geometry": {
+            "x": 190,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-03",
+          "areaM2": 280,
+          "use": "retail",
+          "geometry": {
+            "x": 275,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-04",
+          "areaM2": 280,
+          "use": "retail",
+          "geometry": {
+            "x": 360,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-05",
+          "areaM2": 280,
+          "use": "retail",
+          "geometry": {
+            "x": 445,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-06",
+          "areaM2": 280,
+          "use": "cafe",
+          "geometry": {
+            "x": 530,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-07",
+          "areaM2": 280,
+          "use": "restaurant",
+          "geometry": {
+            "x": 615,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        },
+        {
+          "id": "L1-08",
+          "areaM2": 280,
+          "use": "restaurant",
+          "geometry": {
+            "x": 700,
+            "y": 430,
+            "width": 80,
+            "height": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "grossAreaM2": 2800,
+      "commonAreaM2": 560,
+      "color": "#bbc8df",
+      "geometry": {
+        "x": 105,
+        "y": 358,
+        "width": 680,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "L2-01",
+          "areaM2": 448,
+          "use": "retail",
+          "geometry": {
+            "x": 105,
+            "y": 358,
+            "width": 131,
+            "height": 58
+          }
+        },
+        {
+          "id": "L2-02",
+          "areaM2": 448,
+          "use": "retail",
+          "geometry": {
+            "x": 241,
+            "y": 358,
+            "width": 131,
+            "height": 58
+          }
+        },
+        {
+          "id": "L2-03",
+          "areaM2": 448,
+          "use": "retail",
+          "geometry": {
+            "x": 377,
+            "y": 358,
+            "width": 131,
+            "height": 58
+          }
+        },
+        {
+          "id": "L2-04",
+          "areaM2": 448,
+          "use": "retail",
+          "geometry": {
+            "x": 513,
+            "y": 358,
+            "width": 131,
+            "height": 58
+          }
+        },
+        {
+          "id": "L2-05",
+          "areaM2": 448,
+          "use": "public",
+          "geometry": {
+            "x": 649,
+            "y": 358,
+            "width": 131,
+            "height": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "grossAreaM2": 2012.5,
+      "commonAreaM2": 402.5,
+      "color": "#d2c1d7",
+      "geometry": {
+        "x": 105,
+        "y": 286,
+        "width": 488.75,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "L3-01",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 105,
+            "y": 286,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L3-02",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 227.1875,
+            "y": 286,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L3-03",
+          "areaM2": 402.5,
+          "use": "clinic",
+          "geometry": {
+            "x": 349.375,
+            "y": 286,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L3-04",
+          "areaM2": 402.5,
+          "use": "public",
+          "geometry": {
+            "x": 471.5625,
+            "y": 286,
+            "width": 117.1875,
+            "height": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "grossAreaM2": 2012.5,
+      "commonAreaM2": 402.5,
+      "color": "#e6c9a7",
+      "geometry": {
+        "x": 105,
+        "y": 214,
+        "width": 488.75,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "L4-01",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 105,
+            "y": 214,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L4-02",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 227.1875,
+            "y": 214,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L4-03",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 349.375,
+            "y": 214,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L4-04",
+          "areaM2": 402.5,
+          "use": "public",
+          "geometry": {
+            "x": 471.5625,
+            "y": 214,
+            "width": 117.1875,
+            "height": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "grossAreaM2": 2012.5,
+      "commonAreaM2": 402.5,
+      "color": "#b5d0b9",
+      "geometry": {
+        "x": 105,
+        "y": 142,
+        "width": 488.75,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "L5-01",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 105,
+            "y": 142,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L5-02",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 227.1875,
+            "y": 142,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L5-03",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 349.375,
+            "y": 142,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L5-04",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 471.5625,
+            "y": 142,
+            "width": 117.1875,
+            "height": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "L6",
+      "grossAreaM2": 2012.5,
+      "commonAreaM2": 402.5,
+      "color": "#b5c8d7",
+      "geometry": {
+        "x": 105,
+        "y": 70,
+        "width": 488.75,
+        "height": 58
+      },
+      "modules": [
+        {
+          "id": "L6-01",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 105,
+            "y": 70,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L6-02",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 227.1875,
+            "y": 70,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L6-03",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 349.375,
+            "y": 70,
+            "width": 117.1875,
+            "height": 58
+          }
+        },
+        {
+          "id": "L6-04",
+          "areaM2": 402.5,
+          "use": "office",
+          "geometry": {
+            "x": 471.5625,
+            "y": 70,
+            "width": 117.1875,
+            "height": 58
+          }
+        }
+      ]
+    }
+  ],
+  "network": {
+    "inlet": {
+      "x": 25,
+      "y": 603
+    },
+    "technicalRoom": {
+      "x": 100,
+      "y": 575,
+      "width": 200,
+      "height": 108
+    },
+    "riser": {
+      "x": 840,
+      "y1": 95,
+      "y2": 657
+    },
+    "segments": [
+      {
+        "id": "main",
+        "label": "Main inlet · S1 → S2"
+      },
+      {
+        "id": "heater-feed",
+        "label": "Cold feed to water heater"
+      },
+      {
+        "id": "heater-outlet",
+        "label": "Heated-water outlet to riser"
+      },
+      {
+        "id": "riser",
+        "label": "Vertical distribution riser"
+      },
+      {
+        "id": "branch-U1",
+        "label": "U1 floor branch"
+      },
+      {
+        "id": "branch-L1",
+        "label": "L1 floor branch"
+      },
+      {
+        "id": "branch-L2",
+        "label": "L2 floor branch"
+      },
+      {
+        "id": "branch-L3",
+        "label": "L3 floor branch"
+      },
+      {
+        "id": "branch-L4",
+        "label": "L4 floor branch"
+      },
+      {
+        "id": "branch-L5",
+        "label": "L5 floor branch"
+      },
+      {
+        "id": "branch-L6",
+        "label": "L6 floor branch"
+      },
+      {
+        "id": "sewage-outlet",
+        "label": "Sewage outlet · separate symbolic line"
+      }
+    ],
+    "sensors": [
+      {
+        "id": "S1",
+        "label": "Main inlet sensor"
+      },
+      {
+        "id": "S2",
+        "label": "Downstream distribution sensor"
+      },
+      {
+        "id": "B1",
+        "label": "Illustrative legitimate branch withdrawal"
+      }
+    ]
+  },
+  "extensions": {
+    "rainwater": {
+      "enabled": false,
+      "phase": 2,
+      "components": [
+        "roof catchment",
+        "filtration",
+        "storage tank",
+        "non-potable supply allocation"
+      ]
+    }
+  }
+}

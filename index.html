@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ws://127.0.0.1:* ws://localhost:*; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Smart Drops · Smart Water Management</title>
+  <link rel="icon" type="image/png" href="/assets/smart-drops-logo.png">
+
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><img class="brand-logo" src="/assets/smart-drops-logo.png" alt=""><div>SMART DROPS <small>Smart Water Management</small></div></div>
+      <p class="platform-note">A software platform for smart water education</p>
+      <div class="top-actions"><span class="offline"><i></i> OFFLINE / LOCAL</span><button id="focus-button" class="focus-button" aria-expanded="true" aria-controls="property-overview">Focus workspace</button><button id="fullscreen-button" class="icon-button fullscreen-button" title="Enter full screen (F11)" aria-label="Enter full screen" aria-pressed="false">⛶</button></div>
+    </header>
+    <main>
+      <section id="property-overview" class="hero">
+        <div class="hero-copy"><h1>SEE EVERY DROP<br>TAKE FULL CONTROL</h1><label class="building-selector-label">SELECTED BUILDING<select id="building-selector" aria-label="Select building"></select></label><div class="hero-tags" aria-label="Data source status"><span class="tag simulation" aria-label="Simulated building data is on">● Simulated Building Data · ON</span><span class="tag monitored-off" aria-label="Monitored data is off">○ Monitored Data · OFF</span></div><div class="educational-note" role="note"><strong>EDUCATIONAL MODEL</strong><p>Geometry, tenant assignments, pipe routes, sensors and consumption<br class="note-line-break">are simplified or simulated. They are not actual measurements.</p></div></div>
+        <div class="hero-visuals"><aside class="student-notes-card" aria-labelledby="student-notes-title"><h2 id="student-notes-title">Notes for students</h2><p>This is a software platform for students to develop and test smart water management ideas at the building scale. Students are encouraged to use AI in their development and modify the software as much as possible. The original version is always available in the <a href="https://github.com/smart-water-EDU/SmartWaterApp" target="_blank" rel="noopener noreferrer">Git repository</a>.</p><div class="student-guide-links"><button type="button" id="open-ide-guide" class="student-guide-link">Start working with the code in an IDE <span aria-hidden="true">↗</span></button><button type="button" id="open-development-guide" class="student-guide-link">Instructions and suggestions for further development <span aria-hidden="true">↗</span></button></div></aside><div class="building-photo"><img id="building-photo" src="/assets/kremmergaarden.jpg" alt="Kremmergården building in Ålesund, Norway"><div class="photo-caption">KREMMERGAARDEN · ÅLESUND <span>Photo: <a href="https://bypatrioten.com" target="_blank" rel="noopener noreferrer">bypatrioten.com</a></span></div></div></div>
+      </section>
+      <dialog id="ide-guide-dialog" class="student-guide-dialog" aria-labelledby="ide-guide-title"><div class="student-guide-dialog-heading"><div><span class="guide-eyebrow">STUDENT GUIDE</span><h2 id="ide-guide-title">Start working with the code in an IDE</h2></div><button type="button" class="icon-button" data-close-guide aria-label="Close guide">×</button></div><div id="ide-guide-content" class="student-guide-content">
+<p><strong>SMART WATER APP — Student instructions</strong><br>Clone · Install once · Run locally · Modify in VS Code</p>
+<p>The Smart Water App is a ready-to-run Vite project. Install Node.js once, then use two terminal commands to start the local app. You can develop the interface and add modules without changing the shared baseline data.</p>
+<div class="guide-steps" aria-label="Guide overview"><span><b>1 · CLONE</b>Get SmartWaterApp from GitHub</span><span><b>2 · INSTALL</b>Run npm install once</span><span><b>3 · START</b>Run the local Vite app</span><span><b>4 · EDIT</b>Modify it in VS Code</span><span><b>5 · BUILD</b>Make a static production build</span></div>
+<h3>1. Install the tools</h3><ul><li>Install <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">Node.js 22.12 or newer</a>. Node includes npm.</li><li>Install <a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">Git</a> and <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.</li><li>In VS Code, you may add GitHub Copilot or another AI coding assistant. AI assistance is optional.</li></ul>
+<h3>2. Clone the project</h3><p>In VS Code, press <code>Ctrl+Shift+P</code>, choose <b>Git: Clone</b>, and paste the repository address. Or run these commands in Git Bash:</p><pre><code>git clone https://github.com/smart-water-EDU/SmartWaterApp.git
+cd SmartWaterApp</code></pre><p>Open the resulting <code>SmartWaterApp</code> folder in VS Code. Clone only once; later reopen the same folder.</p>
+<h3>3. Install and start the app</h3><p>Open <b>Terminal → New Terminal</b> in VS Code. From the project folder, run:</p><pre><code>npm install
+npm run dev</code></pre><p>Vite opens the app in your browser at <code>http://127.0.0.1:5173/</code>. Keep the terminal running while you work. Save code changes and Vite refreshes the browser. To stop the app, press <code>Ctrl+C</code> in the terminal.</p><p>To check a production build, run <code>npm run build</code>. The ready-to-deploy files appear in <code>dist/</code>. This build command does not change the baseline dataset.</p>
+<h3>4. Find the source files</h3><ul><li><code>src/app.js</code> connects the tabs, clock, meters, selectors and panels.</li><li><code>src/engine.js</code>, <code>src/sensors.js</code> and <code>src/pump-model.js</code> hold separate calculation modules.</li><li><code>src/components/</code> contains the chart and interactive network code. The building SVG is embedded in <code>index.html</code>.</li><li><code>src/styles/</code> contains the responsive visual design.</li><li><code>data/</code> contains editable JSON/CSV inputs. <code>public/data/datasets.js</code> is generated from the JSON files.</li><li><code>public/assets/</code> contains the local building image, logo and diagram artwork.</li></ul>
+<h3>5. Make a safe first change</h3><p>Open Copilot Chat or your preferred coding assistant and ask it to explain the relevant file before editing. Start with a small style change in <code>src/styles/</code>. For example:</p><blockquote>“Make the selected tab slightly easier to distinguish. Change only the relevant CSS in src/styles/. Do not edit data, HTML, calculations, chart values or other styles. Tell me which rule you will edit first.”</blockquote><p>Review edits in VS Code Source Control, then use <code>git diff</code> to inspect them. Keep your practice changes local; do not push to the shared <code>main</code> branch.</p>
+<h3>6. Update your local copy</h3><p>Before pulling updates, save or back up your own edits. In the project terminal run:</p><pre><code>git pull origin main</code></pre><p>If Git reports a conflict, ask your teacher for help. Do not force-push or delete files to resolve it.</p>
+</div><div class="student-guide-dialog-actions"><a id="download-ide-guide-pdf" class="secondary-button" href="/docs/SmartWater_VSCode_Git_Guide.pdf" download="SmartWater_VSCode_Git_Guide.pdf">Download as PDF</a><button type="button" class="primary-button" data-close-guide>Close</button></div></dialog>
+      <dialog id="development-guide-dialog" class="student-guide-dialog" aria-labelledby="development-guide-title"><div class="student-guide-dialog-heading"><div><span class="guide-eyebrow">STUDENT GUIDE</span><h2 id="development-guide-title">Further development ideas</h2></div><button type="button" class="icon-button" data-close-guide aria-label="Close guide">×</button></div><div class="student-guide-content"><p>Build new features as small, testable modules. Keep educational assumptions visible and preserve the simulated baseline while evaluating alternative scenarios.</p><h3>Suggested extensions</h3><ol><li><strong>Tenant change-of-use scenarios.</strong> Calculate proposed hourly demand from unit area, consumption profile, opening schedule, occupancy and customer fullness. Compare it with a separate copy of the existing baseline.</li><li><strong>Rainwater collection.</strong> Add rainfall inputs, roof catchment and runoff assumptions, first-flush diversion, filtration, tank storage, overflow and non-potable demand allocation.</li><li><strong>Sewage heat recovery.</strong> Model sewage flow and temperature, exchanger performance, heat demand, recovered energy, added pumping energy and maintenance constraints.</li><li><strong>Water balance and sensor quality.</strong> Add pressure or water-quality signals, meter uncertainty, missing data and sensor-offset scenarios, with explanations of how these affect alarms.</li><li><strong>Demand and pump control.</strong> Compare simple schedules or pressure rules with predictive methods in simulation. Keep all pump actions virtual; this application has no real equipment control.</li><li><strong>Data and usability.</strong> Add import validation, scenario export, clearer units, keyboard support and focused tests for calculations and totals.</li></ol><div class="guide-design-rule"><strong>Good extension pattern:</strong> document inputs, outputs, units and assumptions; isolate calculations; add a small test; connect the result through a narrow UI boundary; and leave unrelated features untouched.</div></div><div class="student-guide-dialog-actions"><button type="button" class="primary-button" data-close-guide>Close</button></div></dialog>
+      <section class="clock-bar" aria-label="Simulation time controls">
+        <div><span class="clock-dot"></span><strong>Simulation clock</strong><small>Nominal building time · 2026</small></div>
+        <div class="clock-controls"><button id="previous-hour" class="clock-step-button" aria-label="Previous hour" title="Previous hour"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button><button id="play-button" class="play-button" aria-pressed="false"><svg class="play-glyph" viewBox="0 0 24 24" aria-hidden="true"><path class="play-shape" d="M8 5.5 19 12 8 18.5Z"/><path class="pause-shape" d="M7.5 5.5h3.2v13H7.5zm5.8 0h3.2v13h-3.2z"/></svg><span id="play-label">Play</span></button><button id="next-hour" class="clock-step-button" aria-label="Next hour" title="Next hour"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></button><input id="simulation-time" type="datetime-local" min="2026-01-01T00:00:00" max="2026-12-31T23:59:59" step="1" aria-label="Simulation date and time"><div class="clock-speed-band" role="group" aria-label="Simulation time scale"><button type="button" class="clock-speed-option" data-clock-speed="1" aria-pressed="false">1s:1s</button><button type="button" class="clock-speed-option" data-clock-speed="60" aria-pressed="false">1s:1m</button><button type="button" class="clock-speed-option" data-clock-speed="3600" aria-pressed="true">1s:1h</button><button type="button" class="clock-speed-option" data-clock-speed="86400" aria-pressed="false">1s:1d</button></div></div>
+      </section>
+      
+      
+      <div class="overview-control-grid"><section class="kpis" aria-label="Water indicators">
+  <article class="kpi"><div class="kpi-title">CURRENT FLOW</div><div class="kpi-rows"><div class="kpi-row"><span>Building</span><div class="kpi-value"><strong id="kpi-flow-building">—</strong><small>L/min</small></div></div><div class="kpi-row"><span id="kpi-flow-selected-label">Module · all</span><div class="kpi-value"><strong id="kpi-flow-selected">—</strong><small>L/min</small></div></div></div></article>
+  <article class="kpi"><div class="kpi-title">TODAY</div><div class="kpi-rows"><div class="kpi-row"><span>Building</span><div class="kpi-value"><strong id="kpi-today-building">—</strong><small>m³</small></div></div><div class="kpi-row"><span id="kpi-today-selected-label">Module · all</span><div class="kpi-value"><strong id="kpi-today-selected">—</strong><small>m³</small></div></div></div></article>
+  <article class="kpi"><div class="kpi-title">MONTH TO DATE</div><div class="kpi-rows"><div class="kpi-row"><span>Building</span><div class="kpi-value"><strong id="kpi-month-building">—</strong><small>m³</small></div></div><div class="kpi-row"><span id="kpi-month-selected-label">Module · all</span><div class="kpi-value"><strong id="kpi-month-selected">—</strong><small>m³</small></div></div></div></article>
+  <article class="kpi"><div class="kpi-title">YEAR TO DATE</div><div class="kpi-rows"><div class="kpi-row"><span>Building</span><div class="kpi-value"><strong id="kpi-year-building">—</strong><small>m³</small></div></div><div class="kpi-row"><span id="kpi-year-selected-label">Module · all</span><div class="kpi-value"><strong id="kpi-year-selected">—</strong><small>m³</small></div></div></div></article>
+</section><div class="tab-control-panel"><nav class="tabs" aria-label="Primary views" role="tablist">
+        <button id="tab-monitoring" role="tab" aria-controls="workspace" aria-selected="true" data-tab="monitoring">MONITORING</button>
+        <button id="tab-management" role="tab" aria-controls="workspace" aria-selected="false" data-tab="management">MANAGEMENT</button>
+        <button id="tab-warning" role="tab" aria-controls="workspace" aria-selected="false" data-tab="warning">PREDICTIVE MAINTENANCE <b id="warning-count">2</b></button>
+      </nav><p id="tab-description" class="tab-description" aria-live="polite"></p></div></div>
+      <div class="main-grid">
+        <section id="building-panel" class="panel building-panel">
+          <div class="panel-heading"><div><div class="eyebrow">SPATIAL OVERVIEW</div><h2>Building water network</h2></div></div>
+          <div class="diagram-caption"><span>Simulated unit meters · selected period</span><span class="diagram-caption-meta"><span class="diagram-label">Symbolic diagram</span><span>Not to scale</span><b>SIMULATED DATA</b></span></div>
+          <div class="diagram-controls">
+  <div class="meter-controls"><div class="segmented" role="group" aria-label="Meter display"><button id="meter-current" aria-pressed="true" class="active">Current</button><button id="meter-accumulated" aria-pressed="false">Accumulated</button></div><label id="accumulation-control" class="accumulation-control">Period <input id="meter-window" type="range" min="1" max="168" step="1" value="24" aria-label="Accumulation window in hours"><output id="meter-window-value">24 hours</output></label></div>
+  <div class="network-legend" aria-label="Display water networks">
+    <label class="network-option cold"><input type="checkbox" data-network="cold" checked> <i></i> Cold water supply</label>
+    <label class="network-option hot"><input type="checkbox" data-network="hot"> <i></i> Hot water supply</label>
+    <label class="network-option sewage"><input type="checkbox" data-network="sewage"> <i></i> Sanitary drainage</label>
+    <label class="network-option rainwater"><input type="checkbox" data-network="rainwater"> <i></i> Rainwater drainage</label>
+  </div>
+</div>
+<div id="building-svg-view" class="building-svg-view">
+
+<svg id="building-network-svg" class="embedded-network-svg" role="img" aria-label="Interactive symbolic building water network" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 960 895">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
+  <defs>
+    
+  </defs>
+  <rect class="st59" y="0" width="960" height="895"/>
+  <rect class="st2" x="19.2" y="16.5" width="924" height="753" rx="10" ry="10"/>
+  <rect class="st57" x="100" y="546.7" width="380.5" height="156.1" rx="7" ry="7"/>
+  <path class="st26 pipe-layer-cold" d="M840,60.7v523"/>
+  <path class="st21 pipe-layer-hot" d="M850,71.7v550"/>
+  <path class="st13 pipe-layer-sewage" d="M860,82.7v575"/>
+  <g>
+    <polyline class="st17 pipe-layer-rainwater" points="595.8 27.6 880 27.6 880 685.9"/>
+    <line class="st16 pipe-layer-rainwater" x1="880" y1="687.5" x2="880" y2="689"/>
+  </g>
+  <path class="st28 pipe-layer-cold" d="M840,492.7h-162.3"/>
+  <path class="st23 pipe-layer-hot" d="M850,503.7h-172.3"/>
+  <path class="st22 pipe-layer-sewage" d="M860,514.7h-182.3"/>
+  <path class="st28 pipe-layer-cold" d="M840,420.7h-53"/>
+  <path class="st23 pipe-layer-hot" d="M850,431.7h-63"/>
+  <path class="st22 pipe-layer-sewage" d="M860,442.7h-73"/>
+  <path class="st28 pipe-layer-cold" d="M840,348.7h-53"/>
+  <path class="st23 pipe-layer-hot" d="M850,359.7h-63"/>
+  <path class="st22 pipe-layer-sewage" d="M860,370.7h-73"/>
+  <path class="st28 pipe-layer-cold" d="M840,276.7h-244.2"/>
+  <path class="st23 pipe-layer-hot" d="M850,287.7h-254.2"/>
+  <path class="st22 pipe-layer-sewage" d="M860,298.7h-264.2"/>
+  <path class="st28 pipe-layer-cold" d="M840,204.7h-244.2"/>
+  <path class="st23 pipe-layer-hot" d="M850,215.7h-254.2"/>
+  <path class="st22 pipe-layer-sewage" d="M860,226.7h-264.2"/>
+  <path class="st28 pipe-layer-cold" d="M840,132.7h-244.2"/>
+  <path class="st23 pipe-layer-hot" d="M850,143.7h-254.2"/>
+  <path class="st22 pipe-layer-sewage" d="M860,154.7h-264.2"/>
+  <path class="st28 pipe-layer-cold" d="M840,60.7h-244.2"/>
+  <path class="st23 pipe-layer-hot" d="M850,71.7h-254.2"/>
+  <path class="st22 pipe-layer-sewage" d="M860,82.7h-264.2"/>
+  <path class="st26 pipe-layer-cold" d="M25,583.7h815"/>
+  <g id="cold-water-pump" class="pipe-layer-cold" role="img" aria-label="Simulated pump on cold-water inlet"><title>Simulated cold-water pump</title><circle cx="320" cy="583.7" r="12" fill="#f8fbfd" stroke="#3286bb" stroke-width="3"/><text x="320" y="587.7" text-anchor="middle" font-family="Calibri,Arial,sans-serif" font-size="10" font-weight="700" fill="#3286bb">P</text></g>
+  <path class="st20 pipe-layer-cold" d="M175,602.7v-19"/>
+  <path class="st21 pipe-layer-hot" d="M194,621.7h656"/>
+  <g>
+    <line class="st29 pipe-layer-sewage" x1="285.2" y1="657.7" x2="283.7" y2="657.7"/>
+    <line class="st14 pipe-layer-sewage" x1="280.7" y1="657.7" x2="221.1" y2="657.7"/>
+    <polyline class="st29 pipe-layer-sewage" points="219.6 657.7 218.1 657.7 218.1 656.2"/>
+    <line class="st14 pipe-layer-sewage" x1="218.1" y1="653.1" x2="218.1" y2="642.4"/>
+    <line class="st29 pipe-layer-sewage" x1="218.1" y1="640.9" x2="218.1" y2="639.4"/>
+    <polygon class="st60 pipe-layer-sewage" points="223.2 645.3 218.1 640.2 213 645.3 213 641 218.1 635.9 223.2 641 223.2 645.3"/>
+  </g>
+  <path class="st13 pipe-layer-sewage" d="M860,657.7h-483"/>
+  <g>
+    <line class="st16 pipe-layer-rainwater" x1="880" y1="689" x2="878.5" y2="689"/>
+    <line class="st17 pipe-layer-rainwater" x1="875.5" y1="689" x2="464" y2="689"/>
+    <line class="st16 pipe-layer-rainwater" x1="462.5" y1="689" x2="461" y2="689"/>
+    <polygon class="st58 pipe-layer-rainwater" points="467 684 461.9 689 467 694.1 462.6 694.1 457.6 689 462.6 684 467 684"/>
+  </g>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st37" transform="translate(112 560.7)"><tspan x="0" y="0">TECHNICAL ROOM</tspan></text>
+      </g>
+    </g>
+  </g>
+  <circle class="st9 pipe-layer-hot" cx="176" cy="620.7" r="18"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st36 pipe-layer-hot" transform="translate(168 624.7)"><tspan x="0" y="0">WH</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(69.5 514.7)"><tspan x="0" y="0">U1</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(54.1 529.7)"><tspan x="0" y="0">2,350 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="105" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 490.7)" data-module-id="U1-01"><tspan x="0" y="0">U1-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="186.1" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 523.7)" data-meter-module="U1-01"><tspan x="0" y="0">25.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st44" x="200.1" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(207.1 490.7)" data-module-id="U1-02"><tspan x="0" y="0">U1-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="281.2" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(207.1 523.7)" data-meter-module="U1-02"><tspan x="0" y="0">65.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st44" x="295.2" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(302.2 490.7)" data-module-id="U1-03"><tspan x="0" y="0">U1-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="376.4" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(302.2 523.7)" data-meter-module="U1-03"><tspan x="0" y="0">67.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st47" x="390.4" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(397.4 490.7)" data-module-id="U1-04"><tspan x="0" y="0">U1-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="471.5" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(397.4 523.7)" data-meter-module="U1-04"><tspan x="0" y="0">68 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="485.5" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(492.5 490.7)" data-module-id="U1-05"><tspan x="0" y="0">U1-05</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="566.6" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(492.5 523.7)" data-meter-module="U1-05"><tspan x="0" y="0">26.6 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="580.6" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(587.6 490.7)" data-module-id="U1-06"><tspan x="0" y="0">U1-06</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="661.7" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(587.6 523.7)" data-meter-module="U1-06"><tspan x="0" y="0">92.1 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="538.7" x2="683.7" y2="538.7"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="492.7" r="7" data-floor-sensor="S-U1"><title>Floor flow sensor S-U1</title></circle>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="583.7" r="7"><title>Main cold-water meter</title></circle>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 442.7)"><tspan x="0" y="0">L1</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(54.1 457.7)"><tspan x="0" y="0">2,800 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="105" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 418.7)" data-module-id="L1-01"><tspan x="0" y="0">L1-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="176" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 451.7)" data-meter-module="L1-01"><tspan x="0" y="0">23 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="190" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(197 418.7)" data-module-id="L1-02"><tspan x="0" y="0">L1-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="261" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(197 451.7)" data-meter-module="L1-02"><tspan x="0" y="0">19.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="275" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(282 418.7)" data-module-id="L1-03"><tspan x="0" y="0">L1-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="346" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(282 451.7)" data-meter-module="L1-03"><tspan x="0" y="0">21 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="360" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(367 418.7)" data-module-id="L1-04"><tspan x="0" y="0">L1-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="431" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(367 451.7)" data-meter-module="L1-04"><tspan x="0" y="0">21.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="445" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(452 418.7)" data-module-id="L1-05"><tspan x="0" y="0">L1-05</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="516" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(452 451.7)" data-meter-module="L1-05"><tspan x="0" y="0">22.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st51" x="530" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(537 418.7)" data-module-id="L1-06"><tspan x="0" y="0">L1-06</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="601" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(537 451.7)" data-meter-module="L1-06"><tspan x="0" y="0">192.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st51" x="615" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(622 418.7)" data-module-id="L1-07"><tspan x="0" y="0">L1-07</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="686" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(622 451.7)" data-meter-module="L1-07"><tspan x="0" y="0">265.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st51" x="700" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(707 418.7)" data-module-id="L1-08"><tspan x="0" y="0">L1-08</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="771" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(707 451.7)" data-meter-module="L1-08"><tspan x="0" y="0">227.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="466.7" x2="793" y2="466.7"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="420.7" r="7" data-floor-sensor="S-L1"><title>Floor flow sensor S-L1</title></circle>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 370.7)"><tspan x="0" y="0">L2</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(54.1 385.7)"><tspan x="0" y="0">2,800 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="105" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 346.7)" data-module-id="L2-01"><tspan x="0" y="0">L2-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="227" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 379.7)" data-meter-module="L2-01"><tspan x="0" y="0">35.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="241" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(248 346.7)" data-module-id="L2-02"><tspan x="0" y="0">L2-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="363" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(248 379.7)" data-meter-module="L2-02"><tspan x="0" y="0">35.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="377" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(384 346.7)" data-module-id="L2-03"><tspan x="0" y="0">L2-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="499" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(384 379.7)" data-meter-module="L2-03"><tspan x="0" y="0">32.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="513" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(520 346.7)" data-module-id="L2-04"><tspan x="0" y="0">L2-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="635" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(520 379.7)" data-meter-module="L2-04"><tspan x="0" y="0">36.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="649" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(656 346.7)" data-module-id="L2-05"><tspan x="0" y="0">L2-05</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="771" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(656 379.7)" data-meter-module="L2-05"><tspan x="0" y="0">146.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="394.7" x2="793" y2="394.7"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="348.7" r="7" data-floor-sensor="S-L2"><title>Floor flow sensor S-L2</title></circle>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 298.7)"><tspan x="0" y="0">L3</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 313.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 274.7)" data-module-id="L3-01"><tspan x="0" y="0">L3-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 307.7)" data-meter-module="L3-01"><tspan x="0" y="0">117.8 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 274.7)" data-module-id="L3-02"><tspan x="0" y="0">L3-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 307.7)" data-meter-module="L3-02"><tspan x="0" y="0">119.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st49" x="349.4" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 274.7)" data-module-id="L3-03"><tspan x="0" y="0">L3-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 307.7)" data-meter-module="L3-03"><tspan x="0" y="0">182.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="471.6" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 274.7)" data-module-id="L3-04"><tspan x="0" y="0">L3-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 307.7)" data-meter-module="L3-04"><tspan x="0" y="0">126.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="322.7" x2="793" y2="322.7"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="276.7" r="7" data-floor-sensor="S-L3"><title>Floor flow sensor S-L3</title></circle>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 226.7)"><tspan x="0" y="0">L4</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 241.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 202.7)" data-module-id="L4-01"><tspan x="0" y="0">L4-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 235.7)" data-meter-module="L4-01"><tspan x="0" y="0">112.8 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 202.7)" data-module-id="L4-02"><tspan x="0" y="0">L4-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 235.7)" data-meter-module="L4-02"><tspan x="0" y="0">129.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="349.4" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 202.7)" data-module-id="L4-03"><tspan x="0" y="0">L4-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 235.7)" data-meter-module="L4-03"><tspan x="0" y="0">116.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="471.6" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 202.7)" data-module-id="L4-04"><tspan x="0" y="0">L4-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 235.7)" data-meter-module="L4-04"><tspan x="0" y="0">114.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="250.7" x2="601.8" y2="250.7"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="204.7" r="7" data-floor-sensor="S-L4"><title>Floor flow sensor S-L4</title></circle>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 154.7)"><tspan x="0" y="0">L5</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 169.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 130.7)" data-module-id="L5-01"><tspan x="0" y="0">L5-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 163.7)" data-meter-module="L5-01"><tspan x="0" y="0">111.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 130.7)" data-module-id="L5-02"><tspan x="0" y="0">L5-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 163.7)" data-meter-module="L5-02"><tspan x="0" y="0">126.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="349.4" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 130.7)" data-module-id="L5-03"><tspan x="0" y="0">L5-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 163.7)" data-meter-module="L5-03"><tspan x="0" y="0">130.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="471.6" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 130.7)" data-module-id="L5-04"><tspan x="0" y="0">L5-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 163.7)" data-meter-module="L5-04"><tspan x="0" y="0">113.5 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="178.7" x2="601.8" y2="178.7"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="132.7" r="7" data-floor-sensor="S-L5"><title>Floor flow sensor S-L5</title></circle>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 82.7)"><tspan x="0" y="0">L6</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 97.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 58.7)" data-module-id="L6-01"><tspan x="0" y="0">L6-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 91.7)" data-meter-module="L6-01"><tspan x="0" y="0">115.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 58.7)" data-module-id="L6-02"><tspan x="0" y="0">L6-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 91.7)" data-meter-module="L6-02"><tspan x="0" y="0">110.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="349.4" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 58.7)" data-module-id="L6-03"><tspan x="0" y="0">L6-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 91.7)" data-meter-module="L6-03"><tspan x="0" y="0">109.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="471.6" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 58.7)" data-module-id="L6-04"><tspan x="0" y="0">L6-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 91.7)" data-meter-module="L6-04"><tspan x="0" y="0">129.8 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="106.7" x2="601.8" y2="106.7"/>
+  <line class="st31" x1="97.2" y1="36" x2="599" y2="36"/>
+  <circle class="st10 pipe-layer-cold" cx="809" cy="60.7" r="7" data-floor-sensor="S-L6"><title>Floor flow sensor S-L6</title></circle>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="504" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="621.7" r="7"/>
+  <circle class="st4 pipe-layer-cold" cx="397.4" cy="583.7" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="415.4" cy="621.7" r="7"/>
+  <circle class="st7 pipe-layer-sewage" cx="694" cy="640.4" r="7"/>
+  <circle class="st7 pipe-layer-sewage" cx="840" cy="657.7" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="432" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="360" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="288" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="216" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="144" r="7"/>
+  <circle class="st6 pipe-layer-hot" cx="827" cy="72" r="7"/>
+  <line class="st32" x1="32" y1="821.7" x2="69" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(77 825.7)"><tspan x="0" y="0">Cold supply</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st33" x1="166" y1="821.7" x2="203" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(211 825.7)"><tspan x="0" y="0">Hot supply</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st30" x1="289" y1="821.7" x2="326" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(334 825.7)"><tspan x="0" y="0">Sewage</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st27" x1="405.6" y1="821.7" x2="442.6" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(450.6 825.7)"><tspan x="0" y="0">Gray water</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st18" x1="530.5" y1="821.7" x2="567.5" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(575.5 825.7)"><tspan x="0" y="0">Rain water</tspan></text>
+      </g>
+    </g>
+  </g>
+  <circle class="st11" cx="36.5" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(48 853.8)"><tspan x="0" y="0">Flow sensor</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(181.6 853.8)"><tspan x="0" y="0">Pump</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        
+      </g>
+    </g>
+  </g>
+  <g>
+    <line class="st13 pipe-layer-sewage" x1="285.2" y1="676.8" x2="129.7" y2="676.8"/>
+    <polygon class="st53 pipe-layer-sewage" points="138.6 669.2 131 676.8 138.6 684.4 132.1 684.4 124.5 676.8 132.1 669.2 138.6 669.2"/>
+  </g>
+  <g>
+    <path class="st12 pipe-layer-sewage" d="M376.4,733.5h-91.1v-83.7s17.5-5.1,45.6-5.1,45.6,5.1,45.6,5.1v83.7h-.1Z"/>
+    <line class="st8 pipe-layer-sewage" x1="330.8" y1="666.1" x2="330.8" y2="733"/>
+  </g>
+  <g>
+    <g>
+      <polyline class="st25" points="621.1 681.7 621.1 683.2 618.9 683.2"/>
+      <line class="st15" x1="614.5" y1="683.2" x2="556.4" y2="683.2"/>
+      <polyline class="st25" points="554.4 683.2 552.2 683.2 552.2 681.7"/>
+      <line class="st15" x1="552.2" y1="678.8" x2="552.2" y2="639.2"/>
+      <polyline class="st25" points="552.2 637.7 552.2 636.2 554.4 636.2"/>
+      <line class="st15" x1="558.6" y1="636.2" x2="616.7" y2="636.2"/>
+      <polyline class="st25" points="618.9 636.2 621.1 636.2 621.1 637.7"/>
+      <polyline class="st15" points="621.1 640.7 621.1 641.8 621.1 680.3"/>
+    </g>
+    <g>
+      <line class="st25" x1="552.2" y1="671.9" x2="554.4" y2="671.9"/>
+      <polyline class="st15" points="558.6 671.9 561.7 671.9 608.7 642.9 616.7 642.9"/>
+      <line class="st25" x1="618.9" y1="642.9" x2="621.1" y2="642.9"/>
+    </g>
+    <g>
+      <line class="st25" x1="621.1" y1="673.6" x2="618.9" y2="673.6"/>
+      <line class="st19" x1="616" y1="673.6" x2="611.9" y2="673.6"/>
+      <polyline class="st25" points="610.4 673.6 608.2 673.6 606.6 672.6"/>
+      <polyline class="st24" points="603.7 670.6 563 642.9 556.4 642.9"/>
+      <line class="st25" x1="554.4" y1="642.9" x2="552.2" y2="642.9"/>
+    </g>
+  </g>
+  <line class="st17 pipe-layer-rainwater" x1="787" y1="315.7" x2="880" y2="315.7"/>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 588)"><tspan x="0" y="0">F</tspan></text>
+  <circle class="st10 pipe-layer-cold" cx="397.4" cy="563.3" r="7"/>
+  <text class="st55 pipe-layer-cold" transform="translate(394.7 567.5)"><tspan x="0" y="0">E</tspan></text>
+  <circle class="st10 pipe-layer-cold" cx="139.6" cy="583.7" r="7"/>
+  <text class="st55 pipe-layer-cold" transform="translate(136.9 588)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st56" transform="translate(33.7 854.1)"><tspan x="0" y="0">F</tspan></text>
+  <circle class="st11" cx="293.1" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(304.6 853.8)"><tspan x="0" y="0">Thermometer</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text class="st56" transform="translate(290.2 854.1)"><tspan x="0" y="0">T</tspan></text>
+  <circle class="st11" cx="407.8" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(419.3 853.8)"><tspan x="0" y="0">Pressure gauge</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text class="st56" transform="translate(405 854.1)"><tspan x="0" y="0">P</tspan></text>
+  <circle class="st11" cx="531.9" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(543.4 853.8)"><tspan x="0" y="0">Energy meter</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text class="st56" transform="translate(529.1 854.1)"><tspan x="0" y="0">E</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 496.8)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 625.4)"><tspan x="0" y="0">F</tspan></text>
+  <circle class="st6 pipe-layer-hot" cx="144.8" cy="621.7" r="7"/>
+  <text class="st54 pipe-layer-hot" transform="translate(142.4 625.4)"><tspan x="0" y="0">E</tspan></text>
+  <circle class="st6 pipe-layer-hot" cx="415.3" cy="602" r="7"/>
+  <text class="st54 pipe-layer-hot" transform="translate(412.6 605.8)"><tspan x="0" y="0">E</tspan></text>
+  <text class="st52 pipe-layer-sewage" transform="translate(837.4 661.4)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st52 pipe-layer-sewage" transform="translate(691.2 644.1)"><tspan x="0" y="0">T</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 508)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 424.8)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 436)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 352.3)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 363.5)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 281.1)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 292.2)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 209.1)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 220.2)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 136.6)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 147.7)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55 pipe-layer-cold" transform="translate(806.3 65.3)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54 pipe-layer-hot" transform="translate(824.6 76.5)"><tspan x="0" y="0">F</tspan></text>
+  <polygon class="st3 pipe-layer-cold" points="397.3 578.1 392.7 586.6 402.2 586.6 397.3 578.1"/>
+  <circle class="st0" cx="170.2" cy="850.3" r="7"/>
+  <polygon class="st1" points="170.1 844.7 165.5 853.1 175 853.1 170.1 844.7"/>
+  <polygon class="st5 pipe-layer-hot" points="415.3 616.1 410.5 624.9 420.4 624.9 415.3 616.1"/>
+  <line class="st7 pipe-layer-sewage" x1="694" y1="647.4" x2="694" y2="657.4"/>
+  <line class="st6 pipe-layer-hot" x1="157.8" y1="621.6" x2="151.8" y2="621.6"/>
+  <line class="st6 pipe-layer-hot" x1="415.2" y1="609" x2="415.2" y2="614.7"/>
+  <line class="st10 pipe-layer-cold" x1="397.4" y1="570.3" x2="397.4" y2="576.7"/>
+</svg></div>
+          <div id="module-panel" class="module-panel" aria-live="polite"></div>
+        </section>
+        <section id="workspace" role="tabpanel" aria-labelledby="tab-monitoring" tabindex="0"></section>
+      </div>
+      <footer><span>SMART DROPS <b> / </b> SMART WATER MANAGEMENT · EDUCATIONAL EDITION</span><span>Simulated 2026 Water Monitoring Data — Educational Dataset</span><span>© Mohammad Hosseini</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/data/datasets.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+

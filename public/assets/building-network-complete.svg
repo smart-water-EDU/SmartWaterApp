@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 960 895">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        stroke: #474747;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7 {
+        fill: #fff;
+      }
+
+      .st0, .st4, .st8, .st9, .st6, .st10, .st11, .st12, .st7 {
+        stroke-width: 2px;
+      }
+
+      .st13, .st1, .st14, .st15, .st3, .st16, .st17, .st18, .st19, .st8, .st20, .st21, .st22, .st23, .st5, .st24, .st25, .st26, .st27, .st28, .st29, .st6, .st12, .st7 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st13, .st30, .st14, .st15, .st16, .st17, .st18, .st19, .st8, .st31, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29, .st32, .st33 {
+        fill: none;
+      }
+
+      .st13, .st30, .st15, .st19, .st8, .st22, .st24, .st25, .st12, .st7 {
+        stroke: #4d5661;
+      }
+
+      .st13, .st21, .st26 {
+        stroke-width: 4.5px;
+      }
+
+      .st1, .st3, .st5 {
+        stroke-width: .8px;
+      }
+
+      .st30, .st32, .st33 {
+        stroke-width: 4px;
+      }
+
+      .st2 {
+        stroke: #d3dee5;
+      }
+
+      .st34 {
+        fill: #5d7687;
+      }
+
+      .st34, .st35, .st36, .st37, .st38, .st39, .st40, .st41, .st42, .st43 {
+        isolation: isolate;
+      }
+
+      .st34, .st35, .st36, .st39, .st43 {
+        font-size: 9px;
+      }
+
+      .st34, .st35, .st39, .st43 {
+        font-family: SegoeUI, 'Segoe UI';
+      }
+
+      .st35 {
+        fill: #718696;
+      }
+
+      .st14 {
+        stroke-dasharray: 3.1 3.1;
+      }
+
+      .st14, .st16, .st17, .st18, .st27, .st29 {
+        stroke-width: 3px;
+      }
+
+      .st14, .st27, .st29 {
+        stroke: #8291a0;
+      }
+
+      .st15 {
+        stroke-dasharray: 2.9 2.9;
+      }
+
+      .st3, .st4, .st20, .st26, .st28, .st32, .st10 {
+        stroke: #3286bb;
+      }
+
+      .st44 {
+        fill: #a9c8e6;
+        stroke: #a9c8e6;
+      }
+
+      .st44, .st45, .st46, .st47, .st48, .st49, .st50, .st51 {
+        stroke-width: 1.2px;
+      }
+
+      .st44, .st45, .st46, .st47, .st49, .st50, .st51 {
+        fill-opacity: .6;
+      }
+
+      .st16, .st17, .st18 {
+        stroke: #b7cfe5;
+      }
+
+      .st36 {
+        fill: #9d4540;
+      }
+
+      .st36, .st37, .st38, .st40 {
+        font-family: SegoeUI-Bold, 'Segoe UI';
+        font-weight: 700;
+      }
+
+      .st45 {
+        fill: #e7c7a9;
+        stroke: #e7c7a9;
+      }
+
+      .st37 {
+        fill: #536c7c;
+      }
+
+      .st37, .st38 {
+        font-size: 10px;
+      }
+
+      .st17 {
+        stroke-dasharray: 3 3;
+      }
+
+      .st52, .st53 {
+        fill: #4d5661;
+      }
+
+      .st52, .st54, .st55, .st56 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 11px;
+      }
+
+      .st46 {
+        fill: #a7c4d6;
+        stroke: #a7c4d6;
+      }
+
+      .st18, .st27 {
+        stroke-dasharray: 3;
+      }
+
+      .st19 {
+        stroke-dasharray: 1.9 1.9;
+      }
+
+      .st38 {
+        fill: #2b4256;
+      }
+
+      .st31 {
+        stroke: #bfccd5;
+        stroke-width: 2.8px;
+      }
+
+      .st39 {
+        fill: #526c7e;
+      }
+
+      .st20 {
+        stroke-width: 3.2px;
+      }
+
+      .st57 {
+        fill: #edf3f6;
+        stroke: #bacbd7;
+      }
+
+      .st21, .st23, .st5, .st9, .st6, .st33 {
+        stroke: #cf514b;
+      }
+
+      .st47 {
+        fill: #9ecfc7;
+        stroke: #9ecfc7;
+      }
+
+      .st40 {
+        fill: #304c60;
+        font-size: 15px;
+      }
+
+      .st22, .st23, .st28 {
+        stroke-width: 3.4px;
+      }
+
+      .st54 {
+        fill: #cf514b;
+      }
+
+      .st24 {
+        stroke-dasharray: 2.8 2.8;
+      }
+
+      .st42 {
+        fill: #355d76;
+        font-family: SegoeUI-Semibold, 'Segoe UI';
+        font-size: 8.5px;
+        font-weight: 600;
+      }
+
+      .st48 {
+        fill: #388aa0;
+        stroke: #f8fafb;
+      }
+
+      .st9 {
+        fill: #fae9e7;
+      }
+
+      .st43 {
+        fill: #4e687b;
+      }
+
+      .st55 {
+        fill: #3286bb;
+      }
+
+      .st58 {
+        fill: #b7cfe5;
+      }
+
+      .st56 {
+        fill: #282828;
+      }
+
+      .st49 {
+        fill: #cbb9dd;
+        stroke: #cbb9dd;
+      }
+
+      .st10, .st11 {
+        fill: #f8fbfd;
+      }
+
+      .st11 {
+        stroke: #494949;
+      }
+
+      .st12 {
+        fill: #ccc;
+      }
+
+      .st59 {
+        fill: #f4f8fa;
+      }
+
+      .st50 {
+        fill: #b7d9d1;
+        stroke: #b7d9d1;
+      }
+
+      .st51 {
+        fill: #efc18f;
+        stroke: #efc18f;
+      }
+
+      .st60 {
+        fill: #8291a0;
+      }
+    </style>
+  </defs>
+  <rect class="st59" y="0" width="960" height="895"/>
+  <rect class="st2" x="19.2" y="16.5" width="924" height="753" rx="10" ry="10"/>
+  <rect class="st57" x="100" y="546.7" width="380.5" height="156.1" rx="7" ry="7"/>
+  <path class="st26" d="M840,60.7v523"/>
+  <path class="st21" d="M850,71.7v550"/>
+  <path class="st13" d="M860,82.7v575"/>
+  <g>
+    <polyline class="st17" points="595.8 27.6 880 27.6 880 685.9"/>
+    <line class="st16" x1="880" y1="687.5" x2="880" y2="689"/>
+  </g>
+  <path class="st28" d="M840,492.7h-162.3"/>
+  <path class="st23" d="M850,503.7h-172.3"/>
+  <path class="st22" d="M860,514.7h-182.3"/>
+  <path class="st28" d="M840,420.7h-53"/>
+  <path class="st23" d="M850,431.7h-63"/>
+  <path class="st22" d="M860,442.7h-73"/>
+  <path class="st28" d="M840,348.7h-53"/>
+  <path class="st23" d="M850,359.7h-63"/>
+  <path class="st22" d="M860,370.7h-73"/>
+  <path class="st28" d="M840,276.7h-244.2"/>
+  <path class="st23" d="M850,287.7h-254.2"/>
+  <path class="st22" d="M860,298.7h-264.2"/>
+  <path class="st28" d="M840,204.7h-244.2"/>
+  <path class="st23" d="M850,215.7h-254.2"/>
+  <path class="st22" d="M860,226.7h-264.2"/>
+  <path class="st28" d="M840,132.7h-244.2"/>
+  <path class="st23" d="M850,143.7h-254.2"/>
+  <path class="st22" d="M860,154.7h-264.2"/>
+  <path class="st28" d="M840,60.7h-244.2"/>
+  <path class="st23" d="M850,71.7h-254.2"/>
+  <path class="st22" d="M860,82.7h-264.2"/>
+  <path class="st26" d="M25,583.7h815"/>
+  <path class="st20" d="M175,602.7v-19"/>
+  <path class="st21" d="M194,621.7h656"/>
+  <g>
+    <line class="st29" x1="285.2" y1="657.7" x2="283.7" y2="657.7"/>
+    <line class="st14" x1="280.7" y1="657.7" x2="221.1" y2="657.7"/>
+    <polyline class="st29" points="219.6 657.7 218.1 657.7 218.1 656.2"/>
+    <line class="st14" x1="218.1" y1="653.1" x2="218.1" y2="642.4"/>
+    <line class="st29" x1="218.1" y1="640.9" x2="218.1" y2="639.4"/>
+    <polygon class="st60" points="223.2 645.3 218.1 640.2 213 645.3 213 641 218.1 635.9 223.2 641 223.2 645.3"/>
+  </g>
+  <path class="st13" d="M860,657.7h-483"/>
+  <g>
+    <line class="st16" x1="880" y1="689" x2="878.5" y2="689"/>
+    <line class="st17" x1="875.5" y1="689" x2="464" y2="689"/>
+    <line class="st16" x1="462.5" y1="689" x2="461" y2="689"/>
+    <polygon class="st58" points="467 684 461.9 689 467 694.1 462.6 694.1 457.6 689 462.6 684 467 684"/>
+  </g>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st37" transform="translate(112 560.7)"><tspan x="0" y="0">TECHNICAL ROOM</tspan></text>
+      </g>
+    </g>
+  </g>
+  <circle class="st9" cx="176" cy="620.7" r="18"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st36" transform="translate(168 624.7)"><tspan x="0" y="0">WH</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(69.5 514.7)"><tspan x="0" y="0">U1</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(54.1 529.7)"><tspan x="0" y="0">2,350 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="105" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 490.7)"><tspan x="0" y="0">U1-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 506.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="186.1" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 523.7)"><tspan x="0" y="0">25.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st44" x="200.1" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(207.1 490.7)"><tspan x="0" y="0">U1-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(207.1 506.7)"><tspan x="0" y="0">Grocery</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="281.2" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(207.1 523.7)"><tspan x="0" y="0">65.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st44" x="295.2" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(302.2 490.7)"><tspan x="0" y="0">U1-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(302.2 506.7)"><tspan x="0" y="0">Grocery</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="376.4" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(302.2 523.7)"><tspan x="0" y="0">67.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st47" x="390.4" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(397.4 490.7)"><tspan x="0" y="0">U1-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(397.4 506.7)"><tspan x="0" y="0">Training</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="471.5" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(397.4 523.7)"><tspan x="0" y="0">68 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="485.5" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(492.5 490.7)"><tspan x="0" y="0">U1-05</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(492.5 506.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="566.6" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(492.5 523.7)"><tspan x="0" y="0">26.6 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="580.6" y="473.7" width="90.1" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(587.6 490.7)"><tspan x="0" y="0">U1-06</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(587.6 506.7)"><tspan x="0" y="0">Educational</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="661.7" cy="483.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(587.6 523.7)"><tspan x="0" y="0">92.1 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="538.7" x2="683.7" y2="538.7"/>
+  <circle class="st10" cx="809" cy="492.7" r="7"/>
+  <circle class="st10" cx="809" cy="583.7" r="7"/>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 442.7)"><tspan x="0" y="0">L1</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(54.1 457.7)"><tspan x="0" y="0">2,800 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="105" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 418.7)"><tspan x="0" y="0">L1-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 434.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="176" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 451.7)"><tspan x="0" y="0">23 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="190" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(197 418.7)"><tspan x="0" y="0">L1-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(197 434.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="261" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(197 451.7)"><tspan x="0" y="0">19.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="275" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(282 418.7)"><tspan x="0" y="0">L1-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(282 434.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="346" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(282 451.7)"><tspan x="0" y="0">21 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="360" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(367 418.7)"><tspan x="0" y="0">L1-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(367 434.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="431" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(367 451.7)"><tspan x="0" y="0">21.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="445" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(452 418.7)"><tspan x="0" y="0">L1-05</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(452 434.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="516" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(452 451.7)"><tspan x="0" y="0">22.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st51" x="530" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(537 418.7)"><tspan x="0" y="0">L1-06</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(537 434.7)"><tspan x="0" y="0">Café</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="601" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(537 451.7)"><tspan x="0" y="0">192.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st51" x="615" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(622 418.7)"><tspan x="0" y="0">L1-07</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(622 434.7)"><tspan x="0" y="0">Restaurant</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="686" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(622 451.7)"><tspan x="0" y="0">265.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st51" x="700" y="401.7" width="80" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(707 418.7)"><tspan x="0" y="0">L1-08</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(707 434.7)"><tspan x="0" y="0">Restaurant</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="771" cy="411.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(707 451.7)"><tspan x="0" y="0">227.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="466.7" x2="793" y2="466.7"/>
+  <circle class="st10" cx="809" cy="420.7" r="7"/>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 370.7)"><tspan x="0" y="0">L2</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(54.1 385.7)"><tspan x="0" y="0">2,800 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="105" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 346.7)"><tspan x="0" y="0">L2-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 362.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="227" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 379.7)"><tspan x="0" y="0">35.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="241" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(248 346.7)"><tspan x="0" y="0">L2-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(248 362.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="363" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(248 379.7)"><tspan x="0" y="0">35.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="377" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(384 346.7)"><tspan x="0" y="0">L2-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(384 362.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="499" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(384 379.7)"><tspan x="0" y="0">32.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st50" x="513" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(520 346.7)"><tspan x="0" y="0">L2-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(520 362.7)"><tspan x="0" y="0">Retail</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="635" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(520 379.7)"><tspan x="0" y="0">36.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="649" y="329.7" width="131" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(656 346.7)"><tspan x="0" y="0">L2-05</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(656 362.7)"><tspan x="0" y="0">Educational</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="771" cy="339.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(656 379.7)"><tspan x="0" y="0">146.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="394.7" x2="793" y2="394.7"/>
+  <circle class="st10" cx="809" cy="348.7" r="7"/>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 298.7)"><tspan x="0" y="0">L3</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 313.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 274.7)"><tspan x="0" y="0">L3-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 290.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 307.7)"><tspan x="0" y="0">117.8 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 274.7)"><tspan x="0" y="0">L3-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(234.2 290.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 307.7)"><tspan x="0" y="0">119.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st49" x="349.4" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 274.7)"><tspan x="0" y="0">L3-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(356.4 290.7)"><tspan x="0" y="0">Clinic</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 307.7)"><tspan x="0" y="0">182.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="471.6" y="257.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 274.7)"><tspan x="0" y="0">L3-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(478.6 290.7)"><tspan x="0" y="0">Educational</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="267.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 307.7)"><tspan x="0" y="0">126.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="322.7" x2="793" y2="322.7"/>
+  <circle class="st10" cx="809" cy="276.7" r="7"/>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 226.7)"><tspan x="0" y="0">L4</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 241.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 202.7)"><tspan x="0" y="0">L4-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 218.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 235.7)"><tspan x="0" y="0">112.8 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 202.7)"><tspan x="0" y="0">L4-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(234.2 218.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 235.7)"><tspan x="0" y="0">129.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="349.4" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 202.7)"><tspan x="0" y="0">L4-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(356.4 218.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 235.7)"><tspan x="0" y="0">116.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st45" x="471.6" y="185.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 202.7)"><tspan x="0" y="0">L4-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(478.6 218.7)"><tspan x="0" y="0">Educational</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="195.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 235.7)"><tspan x="0" y="0">114.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="250.7" x2="601.8" y2="250.7"/>
+  <circle class="st10" cx="809" cy="204.7" r="7"/>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 154.7)"><tspan x="0" y="0">L5</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 169.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 130.7)"><tspan x="0" y="0">L5-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 146.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 163.7)"><tspan x="0" y="0">111.7 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 130.7)"><tspan x="0" y="0">L5-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(234.2 146.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 163.7)"><tspan x="0" y="0">126.3 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="349.4" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 130.7)"><tspan x="0" y="0">L5-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(356.4 146.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 163.7)"><tspan x="0" y="0">130.9 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="471.6" y="113.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 130.7)"><tspan x="0" y="0">L5-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(478.6 146.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="123.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 163.7)"><tspan x="0" y="0">113.5 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="178.7" x2="601.8" y2="178.7"/>
+  <circle class="st10" cx="809" cy="132.7" r="7"/>
+  <g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st40" transform="translate(72.7 82.7)"><tspan x="0" y="0">L6</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st34" transform="translate(47.3 97.7)"><tspan x="0" y="0">2,012.5 m²</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="105" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(112 58.7)"><tspan x="0" y="0">L6-01</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(112 74.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="213.2" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(112 91.7)"><tspan x="0" y="0">115.4 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="227.2" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(234.2 58.7)"><tspan x="0" y="0">L6-02</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(234.2 74.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="335.4" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(234.2 91.7)"><tspan x="0" y="0">110.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="349.4" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(356.4 58.7)"><tspan x="0" y="0">L6-03</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(356.4 74.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="457.6" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(356.4 91.7)"><tspan x="0" y="0">109.2 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <rect class="st46" x="471.6" y="41.7" width="117.2" height="58" rx="4" ry="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st38" transform="translate(478.6 58.7)"><tspan x="0" y="0">L6-04</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st43" transform="translate(478.6 74.7)"><tspan x="0" y="0">Office</tspan></text>
+        </g>
+      </g>
+    </g>
+    <circle class="st48" cx="579.8" cy="51.7" r="4"/>
+    <g class="st41">
+      <g class="st41">
+        <g class="st41">
+          <text class="st42" transform="translate(478.6 91.7)"><tspan x="0" y="0">129.8 L/h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <line class="st31" x1="100" y1="106.7" x2="601.8" y2="106.7"/>
+  <line class="st31" x1="97.2" y1="36" x2="599" y2="36"/>
+  <circle class="st10" cx="809" cy="60.7" r="7"/>
+  <circle class="st6" cx="827" cy="504" r="7"/>
+  <circle class="st6" cx="827" cy="621.7" r="7"/>
+  <circle class="st4" cx="397.4" cy="583.7" r="7"/>
+  <circle class="st6" cx="415.4" cy="621.7" r="7"/>
+  <circle class="st7" cx="694" cy="640.4" r="7"/>
+  <circle class="st7" cx="840" cy="657.7" r="7"/>
+  <circle class="st6" cx="827" cy="432" r="7"/>
+  <circle class="st6" cx="827" cy="360" r="7"/>
+  <circle class="st6" cx="827" cy="288" r="7"/>
+  <circle class="st6" cx="827" cy="216" r="7"/>
+  <circle class="st6" cx="827" cy="144" r="7"/>
+  <circle class="st6" cx="827" cy="72" r="7"/>
+  <line class="st32" x1="32" y1="821.7" x2="69" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(77 825.7)"><tspan x="0" y="0">Cold supply</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st33" x1="166" y1="821.7" x2="203" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(211 825.7)"><tspan x="0" y="0">Hot supply</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st30" x1="289" y1="821.7" x2="326" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(334 825.7)"><tspan x="0" y="0">Sewage</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st27" x1="405.6" y1="821.7" x2="442.6" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(450.6 825.7)"><tspan x="0" y="0">Gray water</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st18" x1="530.5" y1="821.7" x2="567.5" y2="821.7"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(575.5 825.7)"><tspan x="0" y="0">Rain water</tspan></text>
+      </g>
+    </g>
+  </g>
+  <circle class="st11" cx="36.5" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(48 853.8)"><tspan x="0" y="0">Flow sensor</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(181.6 853.8)"><tspan x="0" y="0">Pump</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st35" transform="translate(30 878.8)"><tspan x="0" y="0">SIMULATED DATA</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <line class="st13" x1="285.2" y1="676.8" x2="129.7" y2="676.8"/>
+    <polygon class="st53" points="138.6 669.2 131 676.8 138.6 684.4 132.1 684.4 124.5 676.8 132.1 669.2 138.6 669.2"/>
+  </g>
+  <g>
+    <path class="st12" d="M376.4,733.5h-91.1v-83.7s17.5-5.1,45.6-5.1,45.6,5.1,45.6,5.1v83.7h-.1Z"/>
+    <line class="st8" x1="330.8" y1="666.1" x2="330.8" y2="733"/>
+  </g>
+  <g>
+    <g>
+      <polyline class="st25" points="621.1 681.7 621.1 683.2 618.9 683.2"/>
+      <line class="st15" x1="614.5" y1="683.2" x2="556.4" y2="683.2"/>
+      <polyline class="st25" points="554.4 683.2 552.2 683.2 552.2 681.7"/>
+      <line class="st15" x1="552.2" y1="678.8" x2="552.2" y2="639.2"/>
+      <polyline class="st25" points="552.2 637.7 552.2 636.2 554.4 636.2"/>
+      <line class="st15" x1="558.6" y1="636.2" x2="616.7" y2="636.2"/>
+      <polyline class="st25" points="618.9 636.2 621.1 636.2 621.1 637.7"/>
+      <polyline class="st15" points="621.1 640.7 621.1 641.8 621.1 680.3"/>
+    </g>
+    <g>
+      <line class="st25" x1="552.2" y1="671.9" x2="554.4" y2="671.9"/>
+      <polyline class="st15" points="558.6 671.9 561.7 671.9 608.7 642.9 616.7 642.9"/>
+      <line class="st25" x1="618.9" y1="642.9" x2="621.1" y2="642.9"/>
+    </g>
+    <g>
+      <line class="st25" x1="621.1" y1="673.6" x2="618.9" y2="673.6"/>
+      <line class="st19" x1="616" y1="673.6" x2="611.9" y2="673.6"/>
+      <polyline class="st25" points="610.4 673.6 608.2 673.6 606.6 672.6"/>
+      <polyline class="st24" points="603.7 670.6 563 642.9 556.4 642.9"/>
+      <line class="st25" x1="554.4" y1="642.9" x2="552.2" y2="642.9"/>
+    </g>
+  </g>
+  <line class="st17" x1="787" y1="315.7" x2="880" y2="315.7"/>
+  <text class="st55" transform="translate(806.3 588)"><tspan x="0" y="0">F</tspan></text>
+  <circle class="st10" cx="397.4" cy="563.3" r="7"/>
+  <text class="st55" transform="translate(394.7 567.5)"><tspan x="0" y="0">E</tspan></text>
+  <circle class="st10" cx="139.6" cy="583.7" r="7"/>
+  <text class="st55" transform="translate(136.9 588)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st56" transform="translate(33.7 854.1)"><tspan x="0" y="0">F</tspan></text>
+  <circle class="st11" cx="293.1" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(304.6 853.8)"><tspan x="0" y="0">Thermometer</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text class="st56" transform="translate(290.2 854.1)"><tspan x="0" y="0">T</tspan></text>
+  <circle class="st11" cx="407.8" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(419.3 853.8)"><tspan x="0" y="0">Pressure gauge</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text class="st56" transform="translate(405 854.1)"><tspan x="0" y="0">P</tspan></text>
+  <circle class="st11" cx="531.9" cy="850.3" r="6.5"/>
+  <g class="st41">
+    <g class="st41">
+      <g class="st41">
+        <text class="st39" transform="translate(543.4 853.8)"><tspan x="0" y="0">Energy meter</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text class="st56" transform="translate(529.1 854.1)"><tspan x="0" y="0">E</tspan></text>
+  <text class="st55" transform="translate(806.3 496.8)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 625.4)"><tspan x="0" y="0">F</tspan></text>
+  <circle class="st6" cx="144.8" cy="621.7" r="7"/>
+  <text class="st54" transform="translate(142.4 625.4)"><tspan x="0" y="0">E</tspan></text>
+  <circle class="st6" cx="415.3" cy="602" r="7"/>
+  <text class="st54" transform="translate(412.6 605.8)"><tspan x="0" y="0">E</tspan></text>
+  <text class="st52" transform="translate(837.4 661.4)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st52" transform="translate(691.2 644.1)"><tspan x="0" y="0">T</tspan></text>
+  <text class="st54" transform="translate(824.6 508)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55" transform="translate(806.3 424.8)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 436)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55" transform="translate(806.3 352.3)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 363.5)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55" transform="translate(806.3 281.1)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 292.2)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55" transform="translate(806.3 209.1)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 220.2)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55" transform="translate(806.3 136.6)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 147.7)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st55" transform="translate(806.3 65.3)"><tspan x="0" y="0">F</tspan></text>
+  <text class="st54" transform="translate(824.6 76.5)"><tspan x="0" y="0">F</tspan></text>
+  <polygon class="st3" points="397.3 578.1 392.7 586.6 402.2 586.6 397.3 578.1"/>
+  <circle class="st0" cx="170.2" cy="850.3" r="7"/>
+  <polygon class="st1" points="170.1 844.7 165.5 853.1 175 853.1 170.1 844.7"/>
+  <polygon class="st5" points="415.3 616.1 410.5 624.9 420.4 624.9 415.3 616.1"/>
+  <line class="st7" x1="694" y1="647.4" x2="694" y2="657.4"/>
+  <line class="st6" x1="157.8" y1="621.6" x2="151.8" y2="621.6"/>
+  <line class="st6" x1="415.2" y1="609" x2="415.2" y2="614.7"/>
+  <line class="st10" x1="397.4" y1="570.3" x2="397.4" y2="576.7"/>
+</svg>
