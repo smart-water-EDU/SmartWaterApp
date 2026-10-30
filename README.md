@@ -57,7 +57,7 @@ src/platform/browser-bridge.js Local storage and browser fullscreen interface
 src/styles/                    Shared components and SVG styling
 src/styles/control-room.css    Active dashboard theme and responsive layouts
 public/assets/                 Building photograph, logo and diagram artwork
-public/data/datasets.js         Generated local data bundle used by the interface
+public/data/datasets-schema2.js         Generated local data bundle used by the interface
 data/*.json                    Building, profiles, sensor registry and data manifest
 data/*.csv                     Cold/hot module loads, common loads and hourly sensors
 docs/                           Model notes and canonical student-guide PDFs

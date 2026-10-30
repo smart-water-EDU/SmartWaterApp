@@ -33,5 +33,5 @@ test('CSV reader rejects missing values, duplicate columns and nonconsecutive ti
 });
 test('Vite uses local data bundle and modular editor',async()=>{
   const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
-  assert.match(html,/src="\/data\/datasets\.js"/);assert.match(html,/src="\/src\/main\.js"/);
+  assert.match(html,/src="\/data\/datasets-schema2\.js"/);assert.match(html,/src="\/src\/main\.js"/);
 });
