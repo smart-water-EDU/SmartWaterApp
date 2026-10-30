@@ -52,6 +52,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: { input: { index: join(projectRoot, 'index.html'), app: join(projectRoot, 'app.html') } }
   }
 });

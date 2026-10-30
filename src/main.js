@@ -11,6 +11,7 @@ import './styles/gauges.css';
 import './styles/heat-recovery-designer.css';
 import './styles/rainwater-designer.css';
 import './styles/rainwater-consumption-charts.css';
+import './styles/fixed-viewport.css';
 
 // Each educational subsystem registers a documented API under window.SmartDrops.
 import './platform/browser-bridge.js';

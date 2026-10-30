@@ -12,14 +12,14 @@ Open **Development → Additional Systems → Rainwater Collector**. This fixed-
 
 ## Weather file
 
-`data/rainwater_weather_2026.csv` contains 8,760 consecutive hourly rows for 2026. Weather and rainfall are **synthetic educational inputs**, not measured Kremmergården or Ålesund weather. The deterministic generator uses seed **20261101**, illustrative annual rainfall of approximately 1,800 mm, correlated wet spells, and seasonal/daily temperature variation. Temperature is displayed as context; this version does not simulate freezing, snow accumulation or temperature-driven cooling demand.
+`data/rainwater_weather_2026.csv` contains 8,760 consecutive hourly rows on the application's 2026 teaching clock. The values are **2025 historical ECMWF IFS reanalysis for a grid cell near Ålesund IV / Nørve (SN60945), replayed by month, day and hour on 2026**. They are location-specific modeled estimates, not measurements from the station or Kremmergården, and not actual 2026 weather. Station coordinates, returned grid-cell coordinates, source URL, license and retrieval date are in `data/rainwater_weather_source.json`. Temperature is displayed as context; this version does not simulate freezing, snow accumulation or temperature-driven cooling demand.
 
 ```csv
 timestamp_utc,precipitation_mm,temperature_c
-2026-01-01T00:00:00.000Z,0,2.6
+2026-01-01T00:00:00.000Z,0,-2.3
 ```
 
-Precipitation is the depth falling during the hour, not a flow rate. Imports must cover every 2026 hour in UTC, in order, without missing or duplicate readings. Rain must be non-negative; temperature must be between −60 and 70 °C. Import CSV in the weather frame header replaces the active weather; Reset restores the supplied weather. The CSV download button has been removed. The supplied source CSV remains an editable template. Imported weather is stored with the local design and does not overwrite source files. To regenerate the supplied weather, run `npm run data:weather`, then refresh or rebuild.
+Precipitation is the depth falling during the hour, not a flow rate. Imports must cover every 2026 hour in UTC, in order, without missing or duplicate readings. Rain must be non-negative; temperature must be between −60 and 70 °C. Import CSV in the weather frame header replaces the active weather; Reset restores the supplied Ålesund replay. The CSV download button has been removed. The supplied source CSV remains an editable template. Imported weather is stored with the local design and does not overwrite source files. To refresh the supplied 2025 history from Open-Meteo, run `npm run data:weather` with internet access, then refresh or rebuild. The app itself does not need internet to use the bundled history.
 
 ## Hourly water balance
 
@@ -47,7 +47,8 @@ This is a separate design preview. Saving does not change the potable-water base
 - `src/components/rainwater-designer.js`: fixed collector/consumer view, connections, imports and controls.
 - `src/styles/rainwater-designer.css`: scoped layouts.
 - `data/rainwater_presets.json`: editable demand schedules, capacity and collection assumptions.
-- `tools/generate-rain-weather.cjs`: deterministic weather generator, Node built-ins only.
+- `tools/fetch-alesund-weather.mjs`: validates and refreshes the bundled Ålesund replay.
+- `src/weather-locations.js`: named Nørve and Vigra reference stations and coordinates.
 - `tests/rainwater.test.js`: weather validation, schedules, storage balances, input effects and persistence.
 - `src/app.js`: integration with Additional Systems settings.
 
@@ -59,15 +60,17 @@ Four transparent PNG consumer thumbnails in `public/assets/rainwater/` were gene
 
 ## Optional online weather import
 
-**Get API data** opens a compact dialog for latitude, longitude and a completed source year. Defaults use the Ålesund reference location (62.4722, 6.1549) and the latest completed year up to 2026. Internet is used only when Get data is pressed; normal operation remains local. The importer calls the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) for hourly temperature and precipitation in UTC. This is regional weather reanalysis, not a building weather station. Data are attributed to Open-Meteo / ECMWF under CC BY 4.0; the [provider terms](https://open-meteo.com/en/terms) describe educational/non-commercial API use.
+**Ålesund API** opens a compact dialog with two fixed reference locations: Ålesund IV / Nørve (SN60945, 62.4703° N, 6.2108° E) near the city, and Ålesund Airport / Vigra (SN60990, 62.5617° N, 6.1150° E). Nørve is the default. The coordinates come from published Norwegian station listings. The API uses the nearest model grid cell to the selected station coordinates; its returned cell center is recorded separately. These are **model outputs, not station observations**. Internet is used only when a button in this dialog is pressed; the normal app remains local.
 
-The application requires 8,760 hours for its 2026 model. A completed earlier source year is replayed by month/day/hour on 2026 and clearly labeled, for example **Open-Meteo 2025 → 2026 replay**. Leap day is omitted. It is not labeled as actual 2026 weather. Source year, location, request URL and import time are preserved with the design. The complete returned year is validated for chronology, units and missing readings before replacing active weather. Failure or cancellation leaves the existing data in place. Imported rows save with the local design for offline reuse.
+**Check live now** requests [Open-Meteo current conditions](https://open-meteo.com/en/docs) for the selected location. It shows model temperature and precipitation in the preceding **15 minutes**, with a UTC timestamp. The live check is informational and never changes the historical 2026 replay or rainwater balance. **Import historical year** requests complete hourly temperature and precipitation from the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api), using ECMWF IFS reanalysis and the same location. Open-Meteo / ECMWF data are attributed under CC BY 4.0; the [provider terms](https://open-meteo.com/en/terms) describe educational/non-commercial API use.
+
+The application requires 8,760 hours for its 2026 model. A completed earlier source year is replayed by month/day/hour on 2026 and clearly labeled, for example **Ålesund IV / Nørve · 2025 → 2026 replay**. Leap day is omitted. Source year, station reference, actual grid cell, request URL and import time are preserved with the design. The complete returned year is validated for chronology, units, grid location and missing readings before replacing active weather. Failure or cancellation leaves the existing data in place. Imported rows save with the local design for offline reuse.
 
 API precipitation includes the water equivalent of rain and snow. This simplified storage model processes that input immediately; snow storage and melt remain extensions.
 
-- `src/weather-api.js`: request URL, provider validation and replay normalization.
-- `src/components/weather-api-dialog.js`: optional location/year import dialog.
-- `tests/weather-api.test.js`: coordinates, replay, leap year, missing data and error checks.
+- `src/weather-api.js`: live and historical URLs, provider validation and replay normalization.
+- `src/components/weather-api-dialog.js`: fixed Ålesund location selector, live check and historical import.
+- `tests/weather-api.test.js`: station coordinates, live values, replay, leap year, missing data and error checks.
 
 ## Consumer demand and supplied-rainwater curves
 

@@ -265,7 +265,7 @@ function bindStudentGuides(){
   document.querySelectorAll('.student-guide-dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog&&dialog.open)dialog.close();}));
 }
 async function initialize(){
-  if(!window.waterAPI)throw new Error('Open the local index.html file in a modern browser.');
+  if(!window.waterAPI)throw new Error('Open the app through the Vite development server.');
   const [building,profiles,dataset,customData,settings]=await Promise.all([
     window.waterAPI.readData('building.json'),window.waterAPI.readData('retrofit_consumption_profiles.json'),window.waterAPI.readData('data_manifest.json'),window.waterAPI.loadCustomMonitoring(),window.waterAPI.loadSettings()
   ]);

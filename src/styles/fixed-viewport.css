@@ -1,0 +1,36 @@
+/* The app page is rendered inside the 1920 × 1080 design viewport in index.html. */
+html, body.theme-control-room { width: 1920px; height: 1080px; min-width: 1920px; min-height: 1080px; overflow: hidden; }
+body.theme-control-room .app-shell { width: 1920px; height: 1080px; max-width: none; margin: 0; border-radius: 0; overflow-x: hidden; overflow-y: auto; }
+/* The three design editors are centered at 1800 × 800 inside the 1920 × 1080 canvas. */
+body.theme-control-room :is(.retrofit-editor, .heat-designer, .rain-designer) { position: fixed; inset: 0; width: 1800px; min-width: 1800px; max-width: 1800px; height: 800px; min-height: 800px; max-height: 800px; margin: auto; }
+
+/* Editor readability: enlarge only secondary copy, labels and graph annotations.
+   Titles, component choices and the large numeric readings retain their sizes. */
+.retrofit-editor .retrofit-description { font-size: 14.3px; }
+.retrofit-editor :is(.retrofit-feedback, .editor-status, .editor-error, .editor-area-budget, .editor-tool-heading>span, .import-state, .editor-sensor-reading>span, .editor-sensor-reading small) { font-size: 11.7px; }
+.retrofit-editor .editor-annual-metric .annual-copy>span { font-size: 15.6px; }
+.retrofit-editor .editor-annual-metric :is(.annual-reading small, .annual-delta) { font-size: 14.3px; }
+.retrofit-editor :is(.editor-input-card>span, .editor-input-card small) { font-size: 10.4px; }
+.retrofit-editor .editor-schedule-times label { font-size: 9.1px; }
+.retrofit-editor .editor-tool-drawer>button small { font-size: 10.4px; }
+
+.heat-designer :is(.heat-kicker, .heat-heading>small, .heat-purpose-count) { font-size: 11.7px; }
+.heat-designer .heat-heading p { font-size: 13px; }
+.heat-designer :is(.heat-library-heading>span, .heat-canvas-heading span) { font-size: 13px; }
+.heat-designer .heat-gauge-card>span { font-size: 11.7px; min-height: 30px; }
+.heat-designer .heat-header-dial small { font-size: 11.7px; }
+.heat-designer .heat-summary-dial [data-heat-balance] { font-size: 11.7px; }
+.heat-designer :is(.heat-empty p, .heat-node-copy small) { font-size: 13px; }
+.heat-designer .heat-design-node small { font-size: 11.7px; }
+.heat-designer .heat-board.is-compact .heat-node-copy small { font-size: 10.4px; }
+.heat-designer .heat-wire-share { font-size: 13px; }
+
+.rain-designer :is(.rain-kicker, .rain-metric>span, .rain-metric>small, .rain-section-heading>span, .rain-assumption, .rain-weather-current>div>span, .rain-weather-name) { font-size: 11.7px; }
+.rain-designer .rain-heading p { font-size: 13px; }
+.rain-designer :is(.rain-roof-fields label, .rain-system-fields label, .rain-source-summary) { font-size: 13px; }
+.rain-designer :is(.rain-consumer-demand label, .rain-consumer-demand>span, .rain-weather-stats, .rain-weather-attribution, .rain-plot-heading>span, .rain-demand-title>span) { font-size: 10.4px; }
+.rain-designer :is(.rain-weather-plots text, .rain-consumption-chart text) { font-size: 10.4px; }
+.rain-designer .rain-consumption-chart .rain-now-label { font-size: 7.8px; }
+.rain-designer .rain-demand-legend { font-size: 9.1px !important; }
+.rain-designer .rain-demand-tooltip { font-size: 10.4px; }
+.rain-designer .rain-demand-column::after { font-size: 9.1px; }

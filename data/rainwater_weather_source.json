@@ -1,0 +1,26 @@
+{
+  "label": "Ålesund IV / Nørve location weather · 2025 history replayed on 2026",
+  "note": "Open-Meteo ECMWF IFS reanalysis at a nearby model grid cell. This is not a weather-station observation or actual 2026 weather.",
+  "referenceStation": {
+    "id": "SN60945",
+    "name": "Ålesund IV / Nørve",
+    "latitude": 62.4703,
+    "longitude": 6.2108
+  },
+  "modelGridCell": {
+    "latitude": 62.460457,
+    "longitude": 6.136364
+  },
+  "provider": "Open-Meteo / ECMWF IFS historical reanalysis",
+  "sourceYear": 2025,
+  "replayYear": 2026,
+  "periods": 8760,
+  "periodMinutes": 60,
+  "units": {
+    "precipitation": "mm per preceding hour",
+    "temperature": "°C"
+  },
+  "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=62.4703&longitude=6.2108&cell_selection=nearest&timezone=GMT&temperature_unit=celsius&precipitation_unit=mm&start_date=2025-01-01&end_date=2025-12-31&hourly=temperature_2m%2Cprecipitation&models=ecmwf_ifs",
+  "license": "CC BY 4.0",
+  "retrievedAt": "2026-10-30T11:30:49.356Z"
+}

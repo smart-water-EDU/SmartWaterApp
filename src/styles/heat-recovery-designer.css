@@ -41,3 +41,17 @@
 @media(max-width:1100px){.heat-gauge-card{padding:5px 3px}.heat-gauge-card>span{font-size:7px;min-height:19px}.heat-header-dial{height:42px}.heat-header-dial strong{font-size:12px;bottom:10px}.heat-header-dial small{font-size:7px}}
 @media(max-height:620px) and (min-width:651px){.heat-gauge-card>span{font-size:6px;min-height:14px}.heat-header-dial{height:32px}.heat-header-dial strong{font-size:9px;bottom:9px}.heat-header-dial small{font-size:6px}}
 @media(max-width:650px){.heat-header-metrics{grid-template-columns:repeat(3,65px);gap:5px}.heat-header-metrics>.heat-metric{width:65px;height:65px;min-height:65px;aspect-ratio:1}.heat-gauge-card>span{font-size:7px;min-height:16px;white-space:normal!important}.heat-header-dial{height:37px}.heat-header-dial strong{font-size:10px;bottom:9px}.heat-header-dial small{font-size:6px}.heat-designer-body{grid-template-rows:205px minmax(0,1fr)}.heat-type-grid{grid-template-columns:repeat(3,80px)}.heat-purpose-grid{grid-template-columns:repeat(4,62px)}}
+/* Equipment palette: artwork and labels are 1.4× larger at the fixed design size. */
+.heat-designer .heat-type-grid{grid-template-columns:repeat(3,minmax(0,190px))}
+.heat-designer .heat-type-card img{width:91px;height:90px}
+.heat-designer .heat-card-copy strong{font-size:16.8px}
+.heat-designer .heat-card-copy small{font-size:14px}
+.heat-designer .heat-purpose-grid{grid-template-columns:repeat(4,minmax(0,140px))}
+.heat-designer .heat-purpose-select img{width:50px;height:50px}
+.heat-designer .heat-purpose-select strong{font-size:14px}
+/* Match the Consumers and Allocated text baselines to the four instrument cards. */
+.heat-designer .heat-summary-dial{height:55px}
+.heat-designer .heat-summary-dial strong{inset:auto 0 12px;text-align:center}
+.heat-designer .heat-summary-dial small{inset:auto 0 0;text-align:center}
+.heat-designer .heat-summary-dial [data-heat-balance]{position:absolute;left:0;right:0;bottom:0;width:max-content;max-width:100%;height:auto;min-height:0;margin:auto;padding:0;border:0;background:transparent;color:#8dd4de;font:9px/1 'Segoe UI',Arial,sans-serif;text-align:center;box-shadow:none}
+.heat-designer .heat-allocation-metric.is-invalid .heat-summary-dial strong{color:#e4aa7e}

@@ -21,9 +21,9 @@ You need Node.js 22.12 or newer and Git. Install Node.js from [nodejs.org](https
    npm run dev
    ```
 
-Vite opens the app at `http://127.0.0.1:5173/`. Keep the terminal open while developing. Save code changes to see them refresh in the browser. Stop the server with **Ctrl+C**.
+Vite opens the app at `http://127.0.0.1:5173/`. The dashboard uses a fixed 1920 × 1080 design viewport, with the three design editors centered at 1800 × 800. The viewport scales proportionally with the browser window; extra space shows the background. Keep the terminal open while developing. Save code changes to see them refresh in the browser. Stop the server with **Ctrl+C**.
 
-The first `npm install` downloads Vite and its small development dependency set. After that, the app's own data and assets are local; the application does not call an external API or require an account. No installer or executable is needed. This project uses the browser for the interface and Node.js/Vite for the development server and build.
+The first `npm install` downloads Vite and its small development dependency set. After that, the app's bundled data and assets are local; no account is required. The optional Ålesund weather check/import calls Open-Meteo only when requested and needs internet. No installer or executable is needed. This project uses the browser for the interface and Node.js/Vite for the development server and build.
 
 ## Useful commands
 
@@ -34,7 +34,7 @@ npm run build     # Create a production site in dist/
 npm run preview   # Preview the production build locally
 npm run data:build    # Validate hot/cold CSVs, regenerate sensors and browser bundle
 npm run data:generate # Regenerate the seeded 2026 baseline, then rebuild exports
-npm run data:weather  # Regenerate the separate seeded rainwater weather CSV
+npm run data:weather  # Refresh Ålesund 2025 weather history (internet needed)
 ```
 
 `npm run build` can also be used by a static host such as Cloudflare Pages with `dist` as the output directory. The build does not edit the JSON or CSV baseline files. `npm run data:generate` intentionally regenerates the default data and should be used only when you are changing the educational building or demand assumptions.
@@ -42,7 +42,8 @@ npm run data:weather  # Regenerate the separate seeded rainwater weather CSV
 ## Project map
 
 ```text
-index.html                     Vite HTML entry and embedded interactive SVG
+index.html                     Scales the 1920 × 1080 design viewport to the browser
+app.html                       Dashboard, edit dialogs and embedded interactive SVG
 src/main.js                    Loads styles and app modules in dependency order
 src/app.js                     Tabs, clock, panels, controls and local settings
 src/engine.js                  Water totals, chart series and module metrics
@@ -89,6 +90,6 @@ Open **Development → Additional Systems → Sewage Heat Recovery**, or click t
 
 ## Rainwater collection and reuse
 
-Open **Development → Additional Systems → Rainwater Collector**. Configure roofs, storage and collection assumptions, select rainwater consumers and inspect their connections and annual supply. Import a complete hourly 2026 weather CSV from the weather frame header, or optionally retrieve historical reanalysis through Open-Meteo. Completed-year API data are clearly labeled when replayed on 2026. Designs and imported weather save locally, independently of the potable-water baseline. Four generated consumer PNGs are included. See [Rainwater designer](docs/RAINWATER-DESIGNER.md) for the storage balance, CSV format, assumptions and student extension files.
+Open **Development → Additional Systems → Rainwater Collector**. Configure roofs, storage and collection assumptions, select rainwater consumers and inspect their connections and annual supply. The bundled weather is 2025 Ålesund IV / Nørve location reanalysis replayed on the 2026 teaching clock, with provenance in `data/rainwater_weather_source.json`; it is modeled weather, not station observations. The **Ålesund API** dialog can check current 15-minute modeled weather or import a full historical year for Nørve or Vigra. Internet is optional; imported weather and designs save locally, independently of the potable-water baseline. Four generated consumer PNGs are included. See [Rainwater designer](docs/RAINWATER-DESIGNER.md) for the storage balance, CSV format, assumptions and student extension files.
 
-The two student-guide PDFs in `docs/` are the source for **Notes for students** PDF previews and downloads. Vite serves them directly during development and bundles them for deployment. Browsers without inline PDF support show a reading copy in `index.html` and a link to the current PDF; update that fallback text when a guide changes. Local Word drafts are ignored by Git. Guide 01 covers setup, Git and IDE/AI workflows; Guide 02 starts with sewage heat recovery and rainwater before the remaining student extensions.
+The two student-guide PDFs in `docs/` are the source for **Notes for students** PDF previews and downloads. Vite serves them directly during development and bundles them for deployment. Browsers without inline PDF support show a reading copy in `app.html` and a link to the current PDF; update that fallback text when a guide changes. Local Word drafts are ignored by Git. Guide 01 covers setup, Git and IDE/AI workflows; Guide 02 starts with sewage heat recovery and rainwater before the remaining student extensions.

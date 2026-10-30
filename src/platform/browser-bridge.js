@@ -34,6 +34,16 @@
     return true;
   }
 
+  // Fullscreen the outer viewport so the 1920 × 1080 frame keeps its aspect ratio.
+  function fullscreenSurface() {
+    try {
+      if (window.frameElement) {
+        const outerDocument = window.frameElement.ownerDocument;
+        return { document: outerDocument, element: outerDocument.documentElement };
+      }
+    } catch (error) { /* Standalone app.html still supports fullscreen. */ }
+    return { document, element: document.documentElement };
+  }
   window.waterAPI = Object.freeze({
     readData(name) {
       const key = files[name];
@@ -62,23 +72,26 @@
       return true;
     },
     async getFullscreen() {
-      return document.fullscreenElement === document.documentElement;
+      const target = fullscreenSurface();
+      return target.document.fullscreenElement === target.element;
     },
     async toggleFullscreen() {
-      if (document.fullscreenElement) {
-        await document.exitFullscreen();
+      const target = fullscreenSurface();
+      if (target.document.fullscreenElement) {
+        await target.document.exitFullscreen();
         return false;
       }
-      await document.documentElement.requestFullscreen();
+      await target.element.requestFullscreen();
       return true;
     },
     async setFullscreen(enabled) {
-      if (enabled && !document.fullscreenElement) await document.documentElement.requestFullscreen();
-      if (!enabled && document.fullscreenElement) await document.exitFullscreen();
-      return document.fullscreenElement === document.documentElement;
+      const target = fullscreenSurface();
+      if (enabled && !target.document.fullscreenElement) await target.element.requestFullscreen();
+      if (!enabled && target.document.fullscreenElement) await target.document.exitFullscreen();
+      return target.document.fullscreenElement === target.element;
     },
     onFullscreenChange(callback) {
-      document.addEventListener('fullscreenchange', callback);
+      fullscreenSurface().document.addEventListener('fullscreenchange', callback);
     }
   });
 })();

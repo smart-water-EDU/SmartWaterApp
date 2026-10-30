@@ -31,7 +31,11 @@ test('CSV reader rejects missing values, duplicate columns and nonconsecutive ti
   assert.deepEqual(parseCSV('a,b\n"quoted, cell",2\n'),[['a','b'],['quoted, cell','2']]);
   assert.throws(()=>readHourlyCSV('timestamp_utc,cold_L,cold_L\n',['cold_L','hot_L']),/Expected timestamp/);
 });
-test('Vite uses local data bundle and modular editor',async()=>{
-  const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
-  assert.match(html,/src="\/data\/datasets-schema2\.js"/);assert.match(html,/src="\/src\/main\.js"/);
+test('fixed viewport loads the local data bundle and modular editor',async()=>{
+  const shell=await readFile(new URL('../index.html',import.meta.url),'utf8');
+  const app=await readFile(new URL('../app.html',import.meta.url),'utf8');
+  assert.match(shell,/width: 1920px; height: 1080px/);
+  assert.match(shell,/src="\.\/app\.html"/);
+  assert.match(app,/src="\/data\/datasets-schema2\.js"/);
+  assert.match(app,/src="\/src\/main\.js"/);
 });
